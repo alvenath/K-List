@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K-list - Drama</title>
+  <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/drama.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="page-transition loading"></body>
+<div id="header-placeholder"></div>
+
+   <!-- navbar-->
+<header class="main-header" id="navbar-placeholder">
+  <div class="container nav-container">
+    <div class="logo">
+      <h1 class="logo-gradient"><a href="index.html">K-list</a></h1>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="drama.html">Drama</a>
+      <a href="actor.html">Actors</a>
+    </nav>
+<div class="search-bar">
+  <input 
+    type="text" 
+    placeholder="Search Drama..." 
+    id="search-input"
+    autocomplete="off"
+    spellcheck="false"
+  />
+  <button type="button" id="search-btn" class="search-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+    </svg>
+  </button>
+  <div class="search-suggestions" id="search-suggestions"></div>
+</div>
+    <div class="right-icons">
+      <a href="#" class="icon-btn watchlist-btn need-login" title="Watchlist">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+        </svg>
+        <span>Watchlist</span>
+      </a>
+
+      <div class="user-menu">
+        <button class="user-btn" id="user-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+          </svg>
+        </button>
+        <div class="dropdown-menu" id="user-dropdown">
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
+          <a href="#" id="logout-link" style="display:none;">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN CONTENT: 2 KOLOM -->
+  <div class="container drama-page">
+<aside class="sidebar">
+  <div class="filter-section">
+    <h3>Tahun</h3>
+    <div class="year-list">
+      <label><input type="checkbox" value="2025"> 2025</label>
+      <label><input type="checkbox" value="2024"> 2024</label>
+      <label><input type="checkbox" value="2023"> 2023</label>
+      <label><input type="checkbox" value="2022"> 2022</label>
+      <label><input type="checkbox" value="2021"> 2021</label>
+      <label><input type="checkbox" value="2020"> 2020</label>
+    </div>
+  </div>
+
+  <div class="filter-section">
+    <h3>Genre</h3>
+    <div class="genre-list">
+      <label><input type="checkbox" value="Romance"> Romance</label>
+      <label><input type="checkbox" value="Comedy"> Comedy</label>
+      <label><input type="checkbox" value="Action"> Action</label>
+      <label><input type="checkbox" value="Thriller"> Thriller</label>
+      <label><input type="checkbox" value="Mystery"> Mystery</label>
+      <label><input type="checkbox" value="Crime"> Crime</label>
+      <label><input type="checkbox" value="Fantasy"> Fantasy</label>
+      <label><input type="checkbox" value="Historical"> Historical / Sageuk</label>
+      <label><input type="checkbox" value="Medical"> Medical</label>
+      <label><input type="checkbox" value="Legal"> Legal / Law</label>
+      <label><input type="checkbox" value="School"> School / Youth</label>
+      <label><input type="checkbox" value="Horror"> Horror</label>
+    </div>
+  </div>
+
+  <!-- TOMBOL BARU -->
+  <div class="filter-actions">
+    <button id="apply-filters" class="btn-confirm">Confirm Filter</button>
+    <button id="reset-filters" class="btn-reset">Reset All</button>
+  </div>
+</aside>
+
+    <main class="drama-main">
+      <h1 class="page-title">All Dramas</h1>
+      <div class="drama-grid" id="drama-grid"></div>
+      <div class="pagination" id="pagination"></div>
+    </main>
+  </div>
+
+ <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <h2 class="logo-gradient"><a href="index.html">K-list</a></h2>
+          <p>Tonton drama Korea favoritmu kapan saja, di mana saja.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Menu</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="drama.html">Drama</a></li>
+              <li><a href="actor.html">Actors</a></li>
+              <li><a href="#">Watchlist</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Info</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4.5"/><path d="M17.5 6.5h.01"/></svg></a>
+              <a href="#" aria-label="X (Twitter)" class="social-x">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18.244 2h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.5H1.68l7.73-8.835L1.254 2h4.658l4.712 6.232L18.244 2z"/>
+                </svg>
+              </a>
+              <a href="#" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.94C18.88 4 12 4 12 4s-6.88 0-8.6.48a2.78 2.78 0 0 0-1.94 1.94c-.48 2.72-.48 5.28-.48 5.28s0 2.56.48 5.28c.26.73.81 1.28 1.94 1.94 1.72.48 8.6.48 8.6.48s6.88 0 8.6-.48a2.78 2.78 0 0 0 1.94-1.94c.48-2.72.48-5.28.48-5.28s0-2.56-.48-5.28z"/><path d="m9.75 15.02 5.75-3.27-5.75-3.27z"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 K-list. All rights reserved. Made with <span style="color:#E50914;">♥</span> in Indonesia</p>
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="assets/js/config.js"></script> 
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/watchlist.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/drama.js"></script>
+</body>
+</html>
