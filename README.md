@@ -1,4 +1,5 @@
 # K-List (Kernel-style Doubly Linked List)
+# !! THIS IS JUST A DEMO-PROJECT !!
 
 ## 🌟 Project Overview
 
@@ -21,9 +22,26 @@ The K-List implementation is a header-only library. Simply include the main list
 ### File Structure
 
 
-struct employee {
-    char name[64];
-    int id;
-    // The required list node member for linking
-    struct list_head list; 
-};
+## 🛠️ Technology Stack
+
+This is a pure client-side application utilizing:
+
+| Component | Files | Purpose |
+| :--- | :--- | :--- |
+| **HTML5** | All `.html` files | Provides the structure and content for all pages. |
+| **CSS3** | `assets/css/*.css` | Manages the layout, visual design, and styling. |
+| **JavaScript** | `assets/js/*.js` | Handles front-end interactivity, search, authentication logic, and watchlist functionality. |
+
+## 🤝 Contributing
+
+Contributions are welcome! If you find a bug or have an idea for a new feature (like a rating system or better search), please feel free to:
+
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/NewFeature`)
+3.  Commit your Changes (`git commit -m 'Add some NewFeature'`)
+4.  Push to the Branch (`git push origin feature/NewFeature`)
+5.  Open a Pull Request
+
+## 📧 Contact
+
+Alvenath - [https://github.com/alvenath](https://github.com/alvenath)
