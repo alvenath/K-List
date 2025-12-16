@@ -9,15 +9,12 @@ It is designed to be highly flexible, allowing any user-defined structure to be 
 
 ## ✨ Features
 
--   **Intrusive Design:** The list node (`struct list_head`) is embedded within the parent structure, minimizing memory overhead and increasing cache efficiency.
--   **Header-only API:** Clean, straightforward macros and functions for managing list operations.
--   **Type Safety:** Uses the standard `list_entry()` macro for safe retrieval of the parent structure from a list node pointer.
--   **Comprehensive Operations:** Includes methods for initialization, adding/deleting nodes, and safe, robust iteration.
--   **Written in C**
-
-## 🚀 Getting Started
-
-The K-List implementation is a header-only library. Simply include the main list header file (`klist.h`) in your C project.
+* **Full-Stack Architecture:** Utilizes Supabase as the entire back-end (Database, Auth, and Storage).
+* **Database Management:** Stores dynamic data for Dramas, Actors, and user Watchlists in a PostgreSQL database (managed by Supabase).
+* **Secure User Authentication:** Handles user sign-up, sign-in, and session management using Supabase Auth.
+* **Watchlist Management:** Allows authenticated users to track dramas they are watching, completed, or plan to watch.
+* **Detailed Views:** Dedicated pages (`drama-detail.html`, `actor.html`) to display comprehensive, dynamically loaded content.
+* **Client-Side:** Built using pure HTML5, CSS3, and JavaScript.
 
 ## 📁 Project Structure
 ```
@@ -63,6 +60,38 @@ This is a pure client-side application utilizing:
 | **HTML5** | All `.html` files | Provides the structure and content for all pages. |
 | **CSS3** | `assets/css/*.css` | Manages the layout, visual design, and styling. |
 | **JavaScript** | `assets/js/*.js` | Handles front-end interactivity, search, authentication logic, and watchlist functionality. |
+
+This is the Supabase utilizing:
+
+### Prerequisites
+
+* A modern web browser.
+* A **Supabase Project Instance** (free tier is sufficient).
+
+### Installation and Setup
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/alvenath/K-List.git](https://github.com/alvenath/K-List.git)
+    cd K-List
+    ```
+2.  **Configure Supabase Client:**
+    * Create a file named `config.js` in the `assets/js/` directory.
+    * Initialize the Supabase client using your project keys:
+
+    ```javascript
+    // assets/js/config.js
+    const SUPABASE_URL = 'YOUR_SUPABASE_PROJECT_URL';
+    const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+
+    const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    
+    export { supabase };
+    ```
+
+3.  **Run the application:**
+    Open the `index.html` file using a local web server (e.g., Live Server in VS Code, or Python's `http.server`) to ensure the JavaScript fetches data correctly.
+
 
 ## 🤝 Contributing
 
