@@ -20,6 +20,7 @@ It is designed to be highly flexible, allowing any user-defined structure to be 
 The K-List implementation is a header-only library. Simply include the main list header file (`klist.h`) in your C project.
 
 ### File Structure
+K-List/ ├── assets/ │ ├── css/ # Stylesheets for different sections (home.css, drama.css, etc.) │ ├── img/ # Images, including sub-folders for 'actors', 'poster', and 'Avatar.jpg' │ └── js/ # All JavaScript logic (Main.js, auth.js, drama.js, watchlist.js, etc.) ├── actor.html # Actor profile page ├── drama-detail.html # Individual drama details page ├── drama.html # Drama index/listing page ├── index.html # Main landing page ├── login.html # User login interface ├── register.html # User registration interface ├── watchlist.html # User's personal watchlist page └── README.md
 
 
 ## 🛠️ Technology Stack
