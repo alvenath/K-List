@@ -21,7 +21,38 @@ The K-List implementation is a header-only library. Simply include the main list
 
 ## 📁 Project Structure
 ```
-K-List/ ├── assets/ │ ├── css/ # Stylesheets for different sections: │ │ ├── actor.css │ │ ├── base.css │ │ ├── drama-detail.css │ │ ├── drama.css │ │ ├── home.css │ │ └── watchlist.css │ ├── img/ # Images used on the site: │ │ ├── actors/ # Images of actors (e.g., Han-So-Hee.jpeg) │ │ ├── poster/ # Drama poster images │ │ └── Avatar.jpg # Default user avatar image │ └── js/ # All JavaScript logic and utility files: │ ├── Main.js │ ├── actor.js │ ├── admin.js │ ├── auth.js │ ├── config.js │ ├── drama-detail.js │ ├── drama.js │ ├── search.js │ ├── watchlist-page.js │ └── watchlist.js ├── actor.html # Actor profile page ├── drama-detail.html # Individual drama details page ├── drama.html # Drama index/listing page ├── index.html # Main landing page ├── login.html # User login interface ├── register.html # User registration interface ├── watchlist.html # User's personal watchlist page └── README.md
+K-List/
+├── assets/
+│ ├── css/ # Stylesheets for different sections:
+│ │ ├── actor.css
+│ │ ├── base.css
+│ │ ├── drama-detail.css
+│ │ ├── drama.css
+│ │ ├── home.css
+│ │ └── watchlist.css
+│ ├── img/ # Images used on the site:
+│ │ ├── actors/ # Images of actors (e.g., Han-So-Hee.jpeg)
+│ │ ├── poster/ # Drama poster images
+│ │ └── Avatar.jpg # Default user avatar image
+│ └── js/ # All JavaScript logic and utility files:
+│ ├── Main.js
+│ ├── actor.js
+│ ├── admin.js
+│ ├── auth.js
+│ ├── config.js
+│ ├── drama-detail.js
+│ ├── drama.js
+│ ├── search.js
+│ ├── watchlist-page.js
+│ └── watchlist.js
+├── actor.html # Actor profile page
+├── drama-detail.html # Individual drama details page
+├── drama.html # Drama index/listing page
+├── index.html # Main landing page
+├── login.html # User login interface
+├── register.html # User registration interface
+├── watchlist.html # User's personal watchlist page
+└── README.md
 ```
 ## 🛠️ Technology Stack
 
