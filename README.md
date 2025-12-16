@@ -1,20 +1,19 @@
-# K-List (Kernel-style Doubly Linked List)
+# K-List: K-Drama Listing and Rating Platform (Full-Stack)
 ## !! THIS IS JUST A DEMO-PROJECT !!
 
 ## 🌟 Project Overview
 
-This repository provides a robust and efficient **Kernel-style doubly linked list** data structure, designed for use in general-purpose applications that require high performance and low memory overhead. This implementation follows the **"intrusive list"** pattern, where the list pointers are embedded directly into the structures they link.
-
-It is designed to be highly flexible, allowing any user-defined structure to be easily linked without requiring a complex wrapper or additional memory allocation for the list node itself.
+**K-List** is a modern, full-stack web application designed as a dedicated platform for **listing, tracking, and user rating** of Korean dramas.
+The project uses a standard HTML/CSS/JS frontend combined with **Supabase** for all server-side services (database, authentication, and storage), providing a complete and interactive experience for K-Drama enthusiasts.
 
 ## ✨ Features
 
-* **Full-Stack Architecture:** Utilizes Supabase as the entire back-end (Database, Auth, and Storage).
-* **Database Management:** Stores dynamic data for Dramas, Actors, and user Watchlists in a PostgreSQL database (managed by Supabase).
+* **Full-Stack Architecture:** Utilizes Supabase for the entire back-end (Database, Auth, and Storage).
+* **K-Drama Catalog:** Displays a dynamic list of K-Dramas, fetched from the database.
+* **User Rating System:** Allows authenticated users to submit and view ratings for each drama.
+* **Watchlist Management:** Users can track dramas they are watching, completed, or plan to watch.
 * **Secure User Authentication:** Handles user sign-up, sign-in, and session management using Supabase Auth.
-* **Watchlist Management:** Allows authenticated users to track dramas they are watching, completed, or plan to watch.
-* **Detailed Views:** Dedicated pages (`drama-detail.html`, `actor.html`) to display comprehensive, dynamically loaded content.
-* **Client-Side:** Built using pure HTML5, CSS3, and JavaScript.
+* **Detailed Views:** Dedicated pages (`drama-detail.html`, `actor.html`) display comprehensive, dynamically loaded content.
 
 ## 📁 Project Structure
 ```
@@ -53,12 +52,10 @@ K-List/
 ```
 ## 🛠️ Technology Stack
 
-This is a pure client-side application utilizing:
-
 | Role | Component | Technology | Purpose |
 | :--- | :--- | :--- | :--- |
 | **Client-Side** | UI & Logic | HTML5, CSS3, JavaScript | Handles the user interface, routing, and all data display logic. |
-| **Server-Side** | Database | **Supabase (PostgreSQL)** | Persistent storage for all dynamic data (Dramas, Actors, Watchlists). |
+| **Server-Side** | Database | **Supabase (PostgreSQL)** | Persistent storage for all dynamic data (Dramas, Actors, User Ratings). |
 | **Server-Side** | Authentication | **Supabase Auth** | Manages user sign-up, sign-in, and session security. |
 | **Server-Side** | File Storage | **Supabase Storage** | Stores all media files (posters, actor images). |
 | **Integration** | Client Library | Supabase JS SDK | Connects the frontend to the backend services. |
@@ -76,3 +73,5 @@ Contributions are welcome! If you find a bug or have an idea for a new feature (
 ## 📧 Contact
 
 Alvenath - [https://github.com/alvenath](https://github.com/alvenath)
+
+Project Link: [https://github.com/alvenath/K-List](https://github.com/alvenath/K-List)
