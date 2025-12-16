@@ -55,43 +55,13 @@ K-List/
 
 This is a pure client-side application utilizing:
 
-| Component | Files | Purpose |
-| :--- | :--- | :--- |
-| **HTML5** | All `.html` files | Provides the structure and content for all pages. |
-| **CSS3** | `assets/css/*.css` | Manages the layout, visual design, and styling. |
-| **JavaScript** | `assets/js/*.js` | Handles front-end interactivity, search, authentication logic, and watchlist functionality. |
-
-This is the Supabase utilizing:
-
-### Prerequisites
-
-* A modern web browser.
-* A **Supabase Project Instance** (free tier is sufficient).
-
-### Installation and Setup
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/alvenath/K-List.git](https://github.com/alvenath/K-List.git)
-    cd K-List
-    ```
-2.  **Configure Supabase Client:**
-    * Create a file named `config.js` in the `assets/js/` directory.
-    * Initialize the Supabase client using your project keys:
-
-    ```javascript
-    // assets/js/config.js
-    const SUPABASE_URL = 'YOUR_SUPABASE_PROJECT_URL';
-    const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
-
-    const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-    
-    export { supabase };
-    ```
-
-3.  **Run the application:**
-    Open the `index.html` file using a local web server (e.g., Live Server in VS Code, or Python's `http.server`) to ensure the JavaScript fetches data correctly.
-
+| Role | Component | Technology | Purpose |
+| :--- | :--- | :--- | :--- |
+| **Client-Side** | UI & Logic | HTML5, CSS3, JavaScript | Handles the user interface, routing, and all data display logic. |
+| **Server-Side** | Database | **Supabase (PostgreSQL)** | Persistent storage for all dynamic data (Dramas, Actors, Watchlists). |
+| **Server-Side** | Authentication | **Supabase Auth** | Manages user sign-up, sign-in, and session security. |
+| **Server-Side** | File Storage | **Supabase Storage** | Stores all media files (posters, actor images). |
+| **Integration** | Client Library | Supabase JS SDK | Connects the frontend to the backend services. |
 
 ## 🤝 Contributing
 
