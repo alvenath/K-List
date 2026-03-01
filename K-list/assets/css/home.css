@@ -362,7 +362,7 @@ scroll-btn:hover {
 }
 
 /* Small Mobile (Phones) */
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .hero-info h1 {
     font-size: 2rem;
   }
@@ -373,6 +373,7 @@ scroll-btn:hover {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    display: box;
   }
 
   .section h2 {
