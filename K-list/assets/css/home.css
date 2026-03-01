@@ -313,3 +313,80 @@ scroll-btn:hover {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
+/* --- RESPONSIVE FIXES --- */
+
+/* Tablet & Mobile (Standard Breakpoint) */
+@media (max-width: 768px) {
+  /* Hero Section Adjustments */
+  .hero-info h1 {
+    font-size: 2.5rem; /* Shorter titles on mobile */
+  }
+  
+  .hero-center {
+    justify-content: center; /* Center text on mobile for better balance */
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .genre-tags {
+    justify-content: center;
+  }
+
+  /* Grid Adjustments */
+  .scroll-container {
+    padding: 0 15px; /* Reduce heavy side padding from 60px */
+  }
+
+  /* Hide scroll buttons on touch devices (users prefer swiping) */
+  .scroll-btn {
+    display: none; 
+  }
+
+  .drama-grid-horizontal {
+    gap: 1rem;
+    padding-bottom: 20px;
+  }
+
+  .drama-card {
+    min-width: 160px; /* Slimmer cards for small screens */
+    width: 160px;
+    height: auto;
+    min-height: 320px;
+  }
+
+  .drama-card img {
+    height: 220px; /* Scale down image height */
+  }
+}
+
+/* Small Mobile (Phones) */
+@media (max-width: 480px) {
+  .hero-info h1 {
+    font-size: 2rem;
+  }
+
+  .hero-info p {
+    font-size: 0.9rem;
+    display: -webkit-box; /* Limit description lines to avoid overflow */
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .section h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Navbar Adjustments */
+  .nav-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .search-bar {
+    order: 3; /* Push search bar below logo/icons on tiny screens */
+    width: 100%;
+  }
+}
