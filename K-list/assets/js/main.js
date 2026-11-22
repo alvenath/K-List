@@ -117,7 +117,7 @@ if (isHomePage) {
     descEl.textContent = slide.desc;
 
     heroImg.style.opacity = 0;
-    heroImg.src = slide.bg;
+    heroImg.src = encodeURI(slide.bg);
     heroImg.onload = () => {
       heroImg.classList.add('loaded');
       heroImg.style.opacity = 1;
@@ -166,7 +166,7 @@ function createCard(d) {
    <div class="drama-card" onclick="location.href='drama-detail.html?id=${d.id}'" style="cursor:pointer;">
       <img src="${d.img || 'assets/img/no-poster.jpg'}" 
            alt="${d.title}"
-           onerror="this.src='assets/img/no-poster.jpg'">
+           onerror="this.onerror=null;this.src='assets/img/no-poster.jpg'">
       
       <button class="watchlist-add home-watchlist-btn" data-drama-id="${d.id}">
         +
@@ -218,24 +218,27 @@ if (isHomePage) {
       };
     });
     // Filter & sort per section
-    const topAiring = dramasWithRating
-      .filter(d => d.year == currentYear)
+    let topAiring = dramasWithRating
+      .filter(d => d.year >= 2024)
       .sort((a, b) => parseFloat(b.rating || 0) - parseFloat(a.rating || 0))
       .slice(0, 10);
+    if (topAiring.length === 0) topAiring = [...dramasWithRating].slice(0, 10);
 
     const mostPopular = [...dramasWithRating]
       .sort((a, b) => parseFloat(b.rating || 0) - parseFloat(a.rating || 0))
       .slice(0, 10);
 
-    const trending2025 = dramasWithRating
+    let trending2025 = dramasWithRating
       .filter(d => d.year == 2025)
       .sort((a, b) => parseFloat(b.rating || 0) - parseFloat(a.rating || 0))
       .slice(0, 10);
+    if (trending2025.length === 0) trending2025 = [...dramasWithRating].filter(d => d.year >= 2024).slice(0, 10);
 
-    const upcoming = dramasWithRating
-      .filter(d => d.year > currentYear)
+    let upcoming = dramasWithRating
+      .filter(d => d.year >= 2025)
       .sort((a, b) => a.year - b.year)
       .slice(0, 10);
+    if (upcoming.length === 0) upcoming = [...dramasWithRating].slice(0, 10);
 
     const dramaSections = {
       "top-airing": topAiring,

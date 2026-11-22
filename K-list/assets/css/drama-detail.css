@@ -7,6 +7,7 @@
 .backdrop {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
+  background-image: var(--backdrop-url);
   background-size: cover;
   background-position: center;
   filter: blur(20px) brightness(0.4);
