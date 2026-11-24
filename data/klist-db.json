@@ -2928,7 +2928,13 @@
       "id": 1,
       "drama_id": 1,
       "user_id": "user-demo",
-      "added_at": "2025-02-15T12:00:00Z"
+      "added_at": "2025-02-15T12:00:00Z",
+      "status": "watching",
+      "score": 9,
+      "progress": 9,
+      "total_episodes": 16,
+      "notes": "",
+      "updated_at": "2026-11-24T07:35:49.988Z"
     },
     {
       "id": 2,
@@ -2951,6 +2957,29 @@
       "username": "Admin",
       "role": "admin",
       "created_at": "2026-11-22T10:13:36.054Z"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "user-demo",
+      "username": "KListDemo",
+      "email": "demo@klist.com",
+      "bio": "K-Drama enthusiast exploring the best stories.",
+      "avatar": "assets/img/Avatar.jpg",
+      "banner": "assets/img/poster/Vincenzo.jpg",
+      "badge": "K-Drama Enthusiast",
+      "favorites": {
+        "dramas": [
+          2,
+          3,
+          1
+        ],
+        "actors": [
+          18,
+          12
+        ]
+      },
+      "created_at": "2026-11-22T10:13:36.042Z"
     }
   ]
 }

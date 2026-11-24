@@ -16,7 +16,8 @@
     WATCHLIST: 'klist_watchlist',
     REVIEWS: 'klist_reviews',
     USER: 'klist_current_user',
-    USERS: 'klist_users'
+    USERS: 'klist_users',
+    PROFILES: 'klist_custom_profiles'
   };
 
   function getLocal(key, fallback) {
@@ -196,11 +197,13 @@
       return reviewResult;
     },
 
-    // ----------------- WATCHLIST -----------------
-    async getWatchlist(userId) {
+    // ----------------- WATCHLIST (Anime-Planet Style Tracking) -----------------
+    async getWatchlist(userId, status = null) {
       if (isServerRunning && userId) {
         try {
-          const res = await fetch(`/api/watchlist?user_id=${userId}`);
+          const params = new URLSearchParams({ user_id: userId });
+          if (status && status !== 'all') params.append('status', status);
+          const res = await fetch(`/api/watchlist?${params.toString()}`);
           if (res.ok) {
             const json = await res.json();
             return json.data || [];
@@ -208,34 +211,138 @@
         } catch (e) {}
       }
 
-      const list = getLocal(STORAGE_KEYS.WATCHLIST, []);
-      if (!userId) return list;
-      return list.filter(w => String(w.user_id) === String(userId));
+      let list = getLocal(STORAGE_KEYS.WATCHLIST, []);
+      if (userId) list = list.filter(w => String(w.user_id) === String(userId));
+      if (status && status !== 'all') list = list.filter(w => (w.status || 'watching').toLowerCase() === status.toLowerCase());
+
+      return list.map(item => {
+        const drama = (KLIST.dramas || []).find(d => d.id === item.drama_id) || {};
+        return {
+          id: item.id,
+          drama_id: item.drama_id,
+          user_id: item.user_id,
+          status: item.status || 'watching',
+          score: item.score || 0,
+          progress: item.progress || 0,
+          total_episodes: item.total_episodes || 16,
+          notes: item.notes || '',
+          added_at: item.added_at || new Date().toISOString(),
+          updated_at: item.updated_at || item.added_at,
+          drama: {
+            id: drama.id,
+            title: drama.title,
+            year: drama.year,
+            poster_url: drama.poster_url,
+            description: drama.description,
+            genreNames: drama.genreNames || [],
+            rating: drama.rating
+          }
+        };
+      });
     },
 
-    async addToWatchlist(dramaId, userId) {
+    async getWatchlistItem(dramaId, userId) {
       dramaId = parseInt(dramaId, 10);
+      if (!userId) return null;
+      const list = await this.getWatchlist(userId);
+      return list.find(w => w.drama_id === dramaId) || null;
+    },
+
+    async setWatchlistStatus({ dramaId, userId, status = 'watching', score = 0, progress = 0, total_episodes = 16, notes = '' }) {
+      dramaId = parseInt(dramaId, 10);
+      score = parseInt(score, 10) || 0;
+      progress = parseInt(progress, 10) || 0;
+      total_episodes = parseInt(total_episodes, 10) || 16;
+
+      if (status === 'completed' && progress === 0) {
+        progress = total_episodes;
+      }
+
       if (isServerRunning) {
         try {
-          await fetch('/api/watchlist', {
+          const res = await fetch('/api/watchlist', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ drama_id: dramaId, user_id: userId })
+            body: JSON.stringify({ drama_id: dramaId, user_id: userId, status, score, progress, total_episodes, notes })
           });
+          if (res.ok) {
+            const json = await res.json();
+            return json.item;
+          }
         } catch (e) {}
       }
 
-      const list = getLocal(STORAGE_KEYS.WATCHLIST, []);
-      if (!list.find(w => w.drama_id === dramaId && w.user_id === userId)) {
-        list.push({
+      let list = getLocal(STORAGE_KEYS.WATCHLIST, []);
+      const idx = list.findIndex(w => w.drama_id === dramaId && String(w.user_id) === String(userId));
+      let item;
+
+      if (idx !== -1) {
+        list[idx] = {
+          ...list[idx],
+          status,
+          score,
+          progress,
+          total_episodes,
+          notes,
+          updated_at: new Date().toISOString()
+        };
+        item = list[idx];
+      } else {
+        item = {
           id: Date.now(),
           drama_id: dramaId,
           user_id: userId,
-          added_at: new Date().toISOString()
-        });
-        setLocal(STORAGE_KEYS.WATCHLIST, list);
+          status,
+          score,
+          progress,
+          total_episodes,
+          notes,
+          added_at: new Date().toISOString(),
+          updated_at: new Date().toISOString()
+        };
+        list.push(item);
       }
-      return true;
+
+      setLocal(STORAGE_KEYS.WATCHLIST, list);
+      return item;
+    },
+
+    async updateWatchlistProgress(dramaId, userId, delta) {
+      dramaId = parseInt(dramaId, 10);
+      delta = parseInt(delta, 10);
+
+      if (isServerRunning) {
+        try {
+          const res = await fetch('/api/watchlist/progress', {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ drama_id: dramaId, user_id: userId, delta })
+          });
+          if (res.ok) {
+            const json = await res.json();
+            return json.item;
+          }
+        } catch (e) {}
+      }
+
+      let list = getLocal(STORAGE_KEYS.WATCHLIST, []);
+      const item = list.find(w => w.drama_id === dramaId && String(w.user_id) === String(userId));
+      if (!item) return null;
+
+      const total = item.total_episodes || 16;
+      let newProgress = Math.max(0, Math.min((item.progress || 0) + delta, total));
+      item.progress = newProgress;
+      item.updated_at = new Date().toISOString();
+      if (newProgress === total && item.status !== 'completed') {
+        item.status = 'completed';
+      }
+
+      setLocal(STORAGE_KEYS.WATCHLIST, list);
+      return item;
+    },
+
+    async addToWatchlist(dramaId, userId) {
+      return this.setWatchlistStatus({ dramaId, userId, status: 'watching', progress: 0 });
     },
 
     async removeFromWatchlist(dramaId, userId) {
@@ -249,9 +356,203 @@
       }
 
       let list = getLocal(STORAGE_KEYS.WATCHLIST, []);
-      list = list.filter(w => !(w.drama_id === dramaId && w.user_id === userId));
+      list = list.filter(w => !(w.drama_id === dramaId && String(w.user_id) === String(userId)));
       setLocal(STORAGE_KEYS.WATCHLIST, list);
       return true;
+    },
+
+    // ----------------- PROFILE & ANIME-PLANET STATS -----------------
+    getUserStats(userId) {
+      const list = getLocal(STORAGE_KEYS.WATCHLIST, []).filter(w => String(w.user_id) === String(userId));
+      const counts = { watching: 0, completed: 0, planning: 0, stalled: 0, dropped: 0 };
+      let episodesWatched = 0;
+      let scoreSum = 0;
+      let scoreCount = 0;
+      const scoreDist = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0 };
+
+      list.forEach(item => {
+        const st = (item.status || 'watching').toLowerCase();
+        if (counts[st] !== undefined) counts[st]++;
+        else counts.watching++;
+
+        const eps = parseInt(item.progress || 0, 10);
+        episodesWatched += isNaN(eps) ? 0 : eps;
+
+        const score = parseInt(item.score || 0, 10);
+        if (score >= 1 && score <= 10) {
+          scoreSum += score;
+          scoreCount++;
+          scoreDist[score]++;
+        }
+      });
+
+      const total = list.length;
+      const percentages = {
+        watching: total ? Math.round((counts.watching / total) * 100) : 0,
+        completed: total ? Math.round((counts.completed / total) * 100) : 0,
+        planning: total ? Math.round((counts.planning / total) * 100) : 0,
+        stalled: total ? Math.round((counts.stalled / total) * 100) : 0,
+        dropped: total ? Math.round((counts.dropped / total) * 100) : 0
+      };
+
+      const daysWatched = ((episodesWatched * 60) / (24 * 60)).toFixed(1);
+      const meanScore = scoreCount > 0 ? (scoreSum / scoreCount).toFixed(1) : '0.0';
+
+      return {
+        total,
+        counts,
+        percentages,
+        episodesWatched,
+        daysWatched,
+        meanScore,
+        scoreDistribution: scoreDist
+      };
+    },
+
+    async getUserProfile(userId) {
+      if (isServerRunning && userId) {
+        try {
+          const res = await fetch(`/api/profile?user_id=${userId}`);
+          if (res.ok) {
+            const json = await res.json();
+            return json;
+          }
+        } catch (e) {}
+      }
+
+      const profiles = getLocal(STORAGE_KEYS.PROFILES, {});
+      const curUser = this.getUser();
+      const prof = profiles[userId] || {
+        id: userId,
+        username: curUser?.username || 'KListFan',
+        email: curUser?.email || '',
+        bio: 'K-Drama enthusiast exploring the best stories.',
+        avatar: curUser?.avatar || 'assets/img/Avatar.jpg',
+        banner: 'assets/img/poster/Vincenzo.jpg',
+        badge: 'K-Drama Enthusiast',
+        favorites: { dramas: [2, 3], actors: [18, 12] },
+        created_at: curUser?.created_at || new Date().toISOString()
+      };
+
+      const favDramas = (prof.favorites?.dramas || []).map(id => (KLIST.dramas || []).find(d => d.id === id)).filter(Boolean);
+      const favActors = (prof.favorites?.actors || []).map(id => (KLIST.actors || []).find(a => a.id === id)).filter(Boolean);
+      const userReviews = (getLocal(STORAGE_KEYS.REVIEWS, KLIST.reviews || [])).filter(r => String(r.user_id) === String(userId));
+
+      return {
+        profile: prof,
+        favoritesData: {
+          dramas: favDramas,
+          actors: favActors
+        },
+        reviews: userReviews,
+        stats: this.getUserStats(userId)
+      };
+    },
+
+    async updateUserProfile(userId, profileData) {
+      if (isServerRunning && userId) {
+        try {
+          const res = await fetch('/api/profile', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId, ...profileData })
+          });
+          if (res.ok) {
+            const json = await res.json();
+            const curUser = this.getUser();
+            if (curUser && String(curUser.id) === String(userId)) {
+              if (profileData.username) curUser.username = profileData.username;
+              if (profileData.avatar) curUser.avatar = profileData.avatar;
+              setLocal(STORAGE_KEYS.USER, curUser);
+            }
+            return json;
+          }
+        } catch (e) {}
+      }
+
+      const profiles = getLocal(STORAGE_KEYS.PROFILES, {});
+      const cur = profiles[userId] || {
+        id: userId,
+        created_at: new Date().toISOString(),
+        favorites: { dramas: [], actors: [] }
+      };
+
+      const updated = {
+        ...cur,
+        ...profileData,
+        updated_at: new Date().toISOString()
+      };
+
+      profiles[userId] = updated;
+      setLocal(STORAGE_KEYS.PROFILES, profiles);
+
+      const curUser = this.getUser();
+      if (curUser && String(curUser.id) === String(userId)) {
+        if (profileData.username) curUser.username = profileData.username;
+        if (profileData.avatar) curUser.avatar = profileData.avatar;
+        setLocal(STORAGE_KEYS.USER, curUser);
+      }
+
+      return {
+        success: true,
+        profile: updated,
+        stats: this.getUserStats(userId)
+      };
+    },
+
+    async toggleFavorite(userId, type, itemId) {
+      itemId = parseInt(itemId, 10);
+      const favType = type === 'actor' ? 'actors' : 'dramas';
+
+      if (isServerRunning && userId) {
+        try {
+          const res = await fetch('/api/profile/favorite', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId, type: favType, id: itemId })
+          });
+          if (res.ok) {
+            return await res.json();
+          }
+        } catch (e) {}
+      }
+
+      const profiles = getLocal(STORAGE_KEYS.PROFILES, {});
+      let prof = profiles[userId];
+      if (!prof) {
+        const curUser = this.getUser();
+        prof = {
+          id: userId,
+          username: curUser?.username || 'KListFan',
+          favorites: { dramas: [], actors: [] }
+        };
+      }
+
+      if (!prof.favorites) prof.favorites = { dramas: [], actors: [] };
+      if (!Array.isArray(prof.favorites[favType])) prof.favorites[favType] = [];
+
+      const idx = prof.favorites[favType].indexOf(itemId);
+      let isFavorited = false;
+      if (idx !== -1) {
+        prof.favorites[favType].splice(idx, 1);
+        isFavorited = false;
+      } else {
+        prof.favorites[favType].push(itemId);
+        isFavorited = true;
+      }
+
+      profiles[userId] = prof;
+      setLocal(STORAGE_KEYS.PROFILES, profiles);
+      return { success: true, isFavorited, favorites: prof.favorites };
+    },
+
+    isFavorite(userId, type, itemId) {
+      itemId = parseInt(itemId, 10);
+      const favType = type === 'actor' ? 'actors' : 'dramas';
+      const profiles = getLocal(STORAGE_KEYS.PROFILES, {});
+      const prof = profiles[userId];
+      if (!prof || !prof.favorites || !Array.isArray(prof.favorites[favType])) return false;
+      return prof.favorites[favType].includes(itemId);
     },
 
     // ----------------- AUTHENTICATION -----------------
@@ -575,11 +876,35 @@
       if (table === 'drama_genres') return [...(KLIST.drama_genres || [])];
       if (table === 'drama_actors') return [...(KLIST.drama_actors || [])];
       if (table === 'reviews') return getLocal(STORAGE_KEYS.REVIEWS, KLIST.reviews || []);
-      if (table === 'watchlist') return getLocal(STORAGE_KEYS.WATCHLIST, []);
+      if (table === 'watchlist') {
+        const items = getLocal(STORAGE_KEYS.WATCHLIST, []);
+        return items.map(w => ({
+          status: 'watching',
+          score: 0,
+          progress: 0,
+          total_episodes: 16,
+          notes: '',
+          ...w
+        }));
+      }
       if (table === 'profiles') {
         const curUser = getLocal(STORAGE_KEYS.USER, null);
+        const profiles = getLocal(STORAGE_KEYS.PROFILES, {});
+        if (curUser && profiles[curUser.id]) {
+          return [profiles[curUser.id]];
+        }
         return [
-          { id: curUser?.id || 'user-admin', username: curUser?.username || 'Admin', role: curUser?.role || 'admin' }
+          {
+            id: curUser?.id || 'user-admin',
+            username: curUser?.username || 'Admin',
+            email: curUser?.email || 'admin@klist.com',
+            role: curUser?.role || 'admin',
+            avatar: curUser?.avatar || 'assets/img/Avatar.jpg',
+            banner: 'assets/img/poster/Vincenzo.jpg',
+            bio: 'K-Drama enthusiast exploring the best stories.',
+            badge: 'K-Drama Enthusiast',
+            favorites: { dramas: [2, 3], actors: [18, 12] }
+          }
         ];
       }
       return [];
@@ -588,6 +913,11 @@
     _saveTableRows(table, rows) {
       if (table === 'reviews') setLocal(STORAGE_KEYS.REVIEWS, rows);
       else if (table === 'watchlist') setLocal(STORAGE_KEYS.WATCHLIST, rows);
+      else if (table === 'profiles') {
+        const profiles = getLocal(STORAGE_KEYS.PROFILES, {});
+        rows.forEach(r => { if (r.id) profiles[r.id] = r; });
+        setLocal(STORAGE_KEYS.PROFILES, profiles);
+      }
     }
 
     _projectRow(table, row, fields) {

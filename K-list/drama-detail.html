@@ -63,9 +63,76 @@
   <section class="detail-hero">
     <div class="backdrop"></div>
     <div class="container detail-content">
-      <div class="poster">
-        <img id="poster-img" src="" alt="">
-        <button class="watchlist-btn-big" id="watchlist-toggle">+ Add to Watchlist</button>
+      <div class="poster-container">
+        <div class="poster">
+          <img id="poster-img" src="" alt="">
+        </div>
+
+        <!-- Anime-Planet Detail Tracker Widget -->
+        <div class="drama-tracker-card" id="drama-tracker-card">
+          <div class="tracker-header">
+            <h4>Daftar Tontonan</h4>
+            <button class="btn-fav-toggle" id="btn-fav-toggle" title="Tambah ke Drama Favorit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+              <span id="fav-text">Favorit</span>
+            </button>
+          </div>
+
+          <!-- Status Dropdown -->
+          <div class="tracker-field">
+            <label>Status</label>
+            <select id="detail-tracker-status" class="tracker-select">
+              <option value="none">+ Tambah ke Watchlist</option>
+              <option value="watching">Watching (Sedang Nonton)</option>
+              <option value="completed">Completed (Selesai)</option>
+              <option value="planning">Want to Watch (Ingin Ditonton)</option>
+              <option value="stalled">Stalled (Ditunda)</option>
+              <option value="dropped">Dropped (Didrop)</option>
+            </select>
+          </div>
+
+          <!-- Extended fields visible when added to list -->
+          <div id="tracker-extended-fields" style="display:none;">
+            <!-- Episode Counter -->
+            <div class="tracker-field">
+              <label>Progress Episode</label>
+              <div class="tracker-ep-group">
+                <button class="btn-step" id="btn-detail-ep-dec" type="button">−</button>
+                <div class="ep-text"><strong id="detail-ep-current">0</strong> / <span id="detail-ep-total">16</span></div>
+                <button class="btn-step" id="btn-detail-ep-inc" type="button">+</button>
+              </div>
+            </div>
+
+            <!-- Episode Progress bar -->
+            <div class="tracker-progress-track">
+              <div class="tracker-progress-bar" id="detail-progress-bar" style="width:0%"></div>
+            </div>
+
+            <!-- Personal Rating (1-10) -->
+            <div class="tracker-field">
+              <label>Skor Pribadi</label>
+              <select id="detail-tracker-score" class="tracker-select score-select">
+                <option value="0">− Belum Dinilai −</option>
+                <option value="10">★ 10 (Masterpiece)</option>
+                <option value="9">★ 9 (Luar Biasa)</option>
+                <option value="8">★ 8 (Sangat Bagus)</option>
+                <option value="7">★ 7 (Bagus)</option>
+                <option value="6">★ 6 (Cukup Bagus)</option>
+                <option value="5">★ 5 (Biasa Aja)</option>
+                <option value="4">★ 4 (Kurang)</option>
+                <option value="3">★ 3 (Jelek)</option>
+                <option value="2">★ 2 (Sangat Jelek)</option>
+                <option value="1">★ 1 (Bencana)</option>
+              </select>
+            </div>
+
+            <div class="tracker-actions-bottom">
+              <button id="btn-detail-remove" class="btn-text-danger" type="button">Hapus dari Daftar</button>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="info">
         <h1 id="title"></h1>

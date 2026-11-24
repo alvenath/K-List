@@ -26,14 +26,70 @@ let db = {
   drama_actors: [],
   reviews: [],
   watchlist: [],
-  users: []
+  users: [],
+  profiles: []
 };
+
+function calculateUserStats(userId) {
+  const userItems = (db.watchlist || []).filter(w => String(w.user_id) === String(userId));
+  const counts = {
+    watching: 0,
+    completed: 0,
+    planning: 0,
+    stalled: 0,
+    dropped: 0
+  };
+  let totalEpisodesWatched = 0;
+  let ratedCount = 0;
+  let ratingSum = 0;
+  const scoreDistribution = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0 };
+
+  userItems.forEach(item => {
+    const st = (item.status || 'watching').toLowerCase();
+    if (counts[st] !== undefined) counts[st]++;
+    else counts.watching++;
+
+    const eps = parseInt(item.progress || 0, 10);
+    totalEpisodesWatched += isNaN(eps) ? 0 : eps;
+
+    const score = parseInt(item.score || 0, 10);
+    if (score >= 1 && score <= 10) {
+      ratedCount++;
+      ratingSum += score;
+      scoreDistribution[score]++;
+    }
+  });
+
+  const total = userItems.length;
+  const percentages = {
+    watching: total ? Math.round((counts.watching / total) * 100) : 0,
+    completed: total ? Math.round((counts.completed / total) * 100) : 0,
+    planning: total ? Math.round((counts.planning / total) * 100) : 0,
+    stalled: total ? Math.round((counts.stalled / total) * 100) : 0,
+    dropped: total ? Math.round((counts.dropped / total) * 100) : 0
+  };
+
+  const daysWatched = ((totalEpisodesWatched * 60) / (24 * 60)).toFixed(1);
+  const meanScore = ratedCount > 0 ? (ratingSum / ratedCount).toFixed(1) : '0.0';
+
+  return {
+    total,
+    counts,
+    percentages,
+    episodesWatched: totalEpisodesWatched,
+    daysWatched,
+    meanScore,
+    scoreDistribution
+  };
+}
 
 function loadDatabase() {
   if (fs.existsSync(DB_FILE)) {
     try {
       const content = fs.readFileSync(DB_FILE, 'utf8');
       db = JSON.parse(content);
+      db.profiles = db.profiles || [];
+      db.watchlist = db.watchlist || [];
       console.log(`[Database] Loaded persistent data from ${DB_FILE}`);
       console.log(`[Database] Total Dramas: ${db.dramas.length} | Actors: ${db.actors.length} | Reviews: ${db.reviews.length}`);
       return;
@@ -301,33 +357,130 @@ const server = http.createServer(async (req, res) => {
     }
   }
 
-  // GET, POST, DELETE /api/watchlist
+  // GET, POST, PUT, DELETE /api/watchlist
   if (pathname.startsWith('/api/watchlist')) {
     if (req.method === 'GET') {
       let list = [...(db.watchlist || [])];
       if (query.user_id) {
         list = list.filter(w => String(w.user_id) === String(query.user_id));
       }
-      return sendJSON(res, 200, { data: list });
+      if (query.status && query.status !== 'all') {
+        list = list.filter(w => (w.status || 'watching').toLowerCase() === query.status.toLowerCase());
+      }
+
+      // Enrich with drama data and defaults
+      const enriched = list.map(item => {
+        const drama = db.dramas.find(d => d.id === item.drama_id) || {};
+        return {
+          id: item.id,
+          drama_id: item.drama_id,
+          user_id: item.user_id,
+          status: item.status || 'watching',
+          score: item.score || 0,
+          progress: item.progress || 0,
+          total_episodes: item.total_episodes || 16,
+          notes: item.notes || '',
+          added_at: item.added_at || new Date().toISOString(),
+          updated_at: item.updated_at || item.added_at,
+          drama: {
+            id: drama.id,
+            title: drama.title,
+            year: drama.year,
+            poster_url: drama.poster_url,
+            description: drama.description,
+            genreNames: drama.genreNames || [],
+            rating: drama.rating
+          }
+        };
+      });
+
+      return sendJSON(res, 200, {
+        data: enriched,
+        stats: query.user_id ? calculateUserStats(query.user_id) : null
+      });
     }
 
     if (req.method === 'POST') {
       const body = await parseBody(req);
       const dramaId = parseInt(body.drama_id, 10);
       const userId = body.user_id || 'user-demo';
+      const status = body.status || 'watching';
+      const totalEpisodes = parseInt(body.total_episodes || 16, 10);
+      let progress = parseInt(body.progress !== undefined ? body.progress : 0, 10);
+      if (status === 'completed' && body.progress === undefined) {
+        progress = totalEpisodes;
+      }
+      const score = parseInt(body.score || 0, 10);
+      const notes = body.notes || '';
 
-      const found = (db.watchlist || []).find(w => w.drama_id === dramaId && w.user_id === userId);
-      if (!found) {
-        const item = {
+      db.watchlist = db.watchlist || [];
+      const idx = db.watchlist.findIndex(w => w.drama_id === dramaId && String(w.user_id) === String(userId));
+      let savedItem;
+
+      if (idx !== -1) {
+        db.watchlist[idx] = {
+          ...db.watchlist[idx],
+          status,
+          score,
+          progress,
+          total_episodes: totalEpisodes,
+          notes,
+          updated_at: new Date().toISOString()
+        };
+        savedItem = db.watchlist[idx];
+      } else {
+        savedItem = {
           id: db.watchlist.length > 0 ? Math.max(...db.watchlist.map(w => w.id || 0)) + 1 : 1,
           drama_id: dramaId,
           user_id: userId,
-          added_at: new Date().toISOString()
+          status,
+          score,
+          progress,
+          total_episodes: totalEpisodes,
+          notes,
+          added_at: new Date().toISOString(),
+          updated_at: new Date().toISOString()
         };
-        db.watchlist.push(item);
-        saveDatabase();
+        db.watchlist.push(savedItem);
       }
-      return sendJSON(res, 200, { success: true, watchlist: db.watchlist });
+
+      saveDatabase();
+      return sendJSON(res, 200, {
+        success: true,
+        item: savedItem,
+        stats: calculateUserStats(userId)
+      });
+    }
+
+    if (req.method === 'PUT' && pathname === '/api/watchlist/progress') {
+      const body = await parseBody(req);
+      const dramaId = parseInt(body.drama_id, 10);
+      const userId = body.user_id || 'user-demo';
+      const delta = parseInt(body.delta || 0, 10);
+
+      const item = (db.watchlist || []).find(w => w.drama_id === dramaId && String(w.user_id) === String(userId));
+      if (!item) {
+        return sendJSON(res, 404, { error: 'Watchlist item not found' });
+      }
+
+      const total = item.total_episodes || 16;
+      let newProgress = body.progress !== undefined ? parseInt(body.progress, 10) : ((item.progress || 0) + delta);
+      newProgress = Math.max(0, Math.min(newProgress, total));
+
+      item.progress = newProgress;
+      item.updated_at = new Date().toISOString();
+
+      // Auto update status if finished
+      if (newProgress === total && item.status !== 'completed') {
+        item.status = 'completed';
+      }
+
+      saveDatabase();
+      return sendJSON(res, 200, {
+        success: true,
+        item,
+        stats: calculateUserStats(userId)
+      });
     }
 
     if (req.method === 'DELETE') {
@@ -335,13 +488,139 @@ const server = http.createServer(async (req, res) => {
       const userId = query.user_id;
 
       db.watchlist = (db.watchlist || []).filter(w => {
-        if (dramaId && userId) return !(w.drama_id === dramaId && w.user_id === userId);
+        if (dramaId && userId) return !(w.drama_id === dramaId && String(w.user_id) === String(userId));
         if (dramaId) return w.drama_id !== dramaId;
-        if (userId) return w.user_id !== userId;
+        if (userId) return String(w.user_id) !== String(userId);
         return true;
       });
       saveDatabase();
-      return sendJSON(res, 200, { success: true, watchlist: db.watchlist });
+      return sendJSON(res, 200, {
+        success: true,
+        watchlist: db.watchlist,
+        stats: userId ? calculateUserStats(userId) : null
+      });
+    }
+  }
+
+  // GET, POST, PUT /api/profile
+  if (pathname.startsWith('/api/profile')) {
+    db.profiles = db.profiles || [];
+
+    if (pathname === '/api/profile/favorite' && req.method === 'POST') {
+      const body = await parseBody(req);
+      const userId = body.user_id || 'user-demo';
+      const type = body.type === 'actor' ? 'actors' : 'dramas';
+      const itemId = parseInt(body.id, 10);
+
+      let prof = db.profiles.find(p => String(p.id) === String(userId));
+      if (!prof) {
+        const user = (db.users || []).find(u => String(u.id) === String(userId)) || {};
+        prof = {
+          id: userId,
+          username: user.username || 'KListFan',
+          email: user.email || '',
+          bio: 'K-Drama enthusiast exploring the best stories.',
+          avatar: 'assets/img/Avatar.jpg',
+          banner: 'assets/img/poster/Vincenzo.jpg',
+          badge: 'K-Drama Enthusiast',
+          favorites: { dramas: [], actors: [] },
+          created_at: new Date().toISOString()
+        };
+        db.profiles.push(prof);
+      }
+
+      if (!prof.favorites) prof.favorites = { dramas: [], actors: [] };
+      if (!Array.isArray(prof.favorites[type])) prof.favorites[type] = [];
+
+      const existsIdx = prof.favorites[type].indexOf(itemId);
+      let isFavorited = false;
+      if (existsIdx !== -1) {
+        prof.favorites[type].splice(existsIdx, 1);
+        isFavorited = false;
+      } else {
+        prof.favorites[type].push(itemId);
+        isFavorited = true;
+      }
+
+      saveDatabase();
+      return sendJSON(res, 200, { success: true, isFavorited, favorites: prof.favorites });
+    }
+
+    if (req.method === 'GET') {
+      const userId = query.user_id || 'user-demo';
+      let prof = db.profiles.find(p => String(p.id) === String(userId));
+      if (!prof) {
+        const user = (db.users || []).find(u => String(u.id) === String(userId)) || {};
+        prof = {
+          id: userId,
+          username: user.username || 'KListFan',
+          email: user.email || '',
+          bio: 'K-Drama enthusiast exploring the best stories.',
+          avatar: user.avatar || 'assets/img/Avatar.jpg',
+          banner: 'assets/img/poster/Vincenzo.jpg',
+          badge: 'K-Drama Enthusiast',
+          favorites: { dramas: [2, 3], actors: [18, 12] },
+          created_at: user.created_at || new Date().toISOString()
+        };
+        db.profiles.push(prof);
+        saveDatabase();
+      }
+
+      // Populate favorites
+      const favDramas = (prof.favorites?.dramas || []).map(id => db.dramas.find(d => d.id === id)).filter(Boolean);
+      const favActors = (prof.favorites?.actors || []).map(id => db.actors.find(a => a.id === id)).filter(Boolean);
+      const userReviews = (db.reviews || []).filter(r => String(r.user_id) === String(userId));
+
+      return sendJSON(res, 200, {
+        profile: prof,
+        favoritesData: {
+          dramas: favDramas,
+          actors: favActors
+        },
+        reviews: userReviews,
+        stats: calculateUserStats(userId)
+      });
+    }
+
+    if (req.method === 'POST' || req.method === 'PUT') {
+      const body = await parseBody(req);
+      const userId = body.user_id || (body.profile && body.profile.id) || 'user-demo';
+      const profIdx = db.profiles.findIndex(p => String(p.id) === String(userId));
+
+      let prof = profIdx !== -1 ? db.profiles[profIdx] : {
+        id: userId,
+        created_at: new Date().toISOString(),
+        favorites: { dramas: [], actors: [] }
+      };
+
+      if (body.username) prof.username = body.username.trim();
+      if (body.bio !== undefined) prof.bio = body.bio.trim();
+      if (body.avatar) prof.avatar = body.avatar.trim();
+      if (body.banner) prof.banner = body.banner.trim();
+      if (body.badge) prof.badge = body.badge.trim();
+      if (body.favorites) prof.favorites = body.favorites;
+
+      prof.updated_at = new Date().toISOString();
+
+      if (profIdx !== -1) {
+        db.profiles[profIdx] = prof;
+      } else {
+        db.profiles.push(prof);
+      }
+
+      // Also update users array if username or avatar changed
+      const userObj = (db.users || []).find(u => String(u.id) === String(userId));
+      if (userObj) {
+        if (prof.username) userObj.username = prof.username;
+        if (prof.avatar) userObj.avatar = prof.avatar;
+      }
+
+      saveDatabase();
+      return sendJSON(res, 200, {
+        success: true,
+        profile: prof,
+        stats: calculateUserStats(userId)
+      });
     }
   }
 
