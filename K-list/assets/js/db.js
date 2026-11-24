@@ -317,6 +317,48 @@
       return { user, error: null };
     },
 
+    async loginWithGoogle(customEmail, customName) {
+      let email = customEmail;
+      let username = customName;
+
+      // If no custom email is passed, prompt or default to Google Demo Account
+      if (!email) {
+        const input = prompt("Masukkan alamat Gmail Anda (atau klik OK untuk akun Google Demo):", "user.google@gmail.com");
+        if (input === null) return null; // user clicked cancel
+        email = input.trim() || "user.google@gmail.com";
+        username = email.split('@')[0];
+      }
+
+      if (isServerRunning) {
+        try {
+          const res = await fetch('/api/auth/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, username, provider: 'google' })
+          });
+          if (res.ok) {
+            const json = await res.json();
+            setLocal(STORAGE_KEYS.USER, json.user);
+            notifyAuth('SIGNED_IN', { user: json.user });
+            return json.user;
+          }
+        } catch (e) {}
+      }
+
+      const googleUser = {
+        id: 'google-' + btoa(email).substring(0, 10),
+        email: email,
+        username: username || email.split('@')[0],
+        role: 'user',
+        provider: 'google',
+        avatar: 'assets/img/Avatar.jpg',
+        created_at: new Date().toISOString()
+      };
+      setLocal(STORAGE_KEYS.USER, googleUser);
+      notifyAuth('SIGNED_IN', { user: googleUser });
+      return googleUser;
+    },
+
     async logout() {
       setLocal(STORAGE_KEYS.USER, null);
       notifyAuth('SIGNED_OUT', null);
@@ -595,6 +637,16 @@
       async signUp({ email, password }) {
         const res = await db.register(email, password);
         return { data: { user: res.user, session: { user: res.user } }, error: res.error };
+      },
+      async signInWithOAuth({ provider }) {
+        if (provider === 'google') {
+          const user = await db.loginWithGoogle();
+          if (user) {
+            return { data: { user, session: { user } }, error: null };
+          }
+          return { data: null, error: { message: 'Google login canceled' } };
+        }
+        return { data: null, error: { message: 'Provider not supported' } };
       },
       async signOut() {
         await db.logout();
