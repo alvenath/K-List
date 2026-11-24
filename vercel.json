@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/K-list/index.html" },
+    { "source": "/assets/(.*)", "destination": "/K-list/assets/$1" },
+    { "source": "/(.*\\.html)", "destination": "/K-list/$1" }
+  ]
+}

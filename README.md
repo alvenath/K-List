@@ -4,21 +4,26 @@
 ## 🌟 Project Overview
 
 **K-List** is a modern, full-stack web application designed as a dedicated platform for **listing, tracking, and user rating** of Korean dramas.
-The project combines a responsive HTML/CSS/JS frontend with a versatile backend architecture supporting both a **dedicated Node.js backend server** with local image asset resolution and **Supabase** for cloud database, auth, and storage.
+The project features a responsive HTML/CSS/JS frontend powered by a **persistent, zero-pause database architecture** (Node.js REST API + local file database in `data/klist-db.json` and universal browser storage in `assets/js/db.js`).
+
+> [!NOTE]
+> **No More Supabase Pausing:** The backend no longer depends on Supabase's free-tier cloud instance that pauses after inactivity. All dramas, actor portraits, user ratings, reviews, and watchlists are stored persistently in your local database that is always ready and never sleeps.
 
 ## ✨ Features
 
-* **Full-Stack Architecture:** Node.js backend server (`server.js`) with REST APIs and Supabase cloud integration.
-* **40+ K-Drama Catalog with Images:** Fully populated catalog featuring posters directly mapped from `assets/img/poster/`.
-* **21+ K-Actors Directory:** Actor directory with biographies, birth decades, gender filters, and portraits mapped from `assets/img/actors/`.
-* **User Rating & Review System:** Allows users to submit, view, and update ratings and reviews for each drama.
-* **Watchlist Management:** Users can track dramas they are watching, completed, or plan to watch.
-* **Resilient Data Layer:** Automatically resolves and serves local images (`assets/img`) seamlessly even if the cloud database is offline.
-* **Detailed Views:** Dedicated pages (`drama-detail.html`, `actor.html`) display comprehensive, dynamically loaded content.
+* **Zero-Pause Persistent Database:** Local file-backed database (`data/klist-db.json`) that never pauses, expires, or requires restarting.
+* **40+ K-Drama Catalog with Images:** Full catalog with images mapped from `assets/img/poster/`.
+* **21+ K-Actors Directory:** Actor directory with portraits from `assets/img/actors/`, biographies, birth decades, and gender filters.
+* **Interactive Rating & Review System:** Users can submit, view, and update reviews and 1-10 star ratings.
+* **Personal Watchlist Management:** Track dramas you are currently watching, plan to watch, or completed.
+* **Full Authentication:** User registration, login, and session persistence.
+* **Detailed Views:** Pages for drama details (`drama-detail.html`) and actors (`actor.html`).
 
 ## 📁 Project Structure
 ```
 K-List/
+├── data/
+│   └── klist-db.json         # Persistent database (dramas, actors, reviews, watchlist, users)
 ├── K-list/
 │   ├── assets/
 │   │   ├── css/              # Stylesheets for different sections:
@@ -36,7 +41,8 @@ K-List/
 │   │   │   └── no-photo.jpg  # Fallback actor photo placeholder
 │   │   └── js/               # JavaScript logic and data adapters:
 │   │       ├── data.js       # Complete drama & actor dataset
-│   │       ├── config.js     # Supabase client & resilient local backend adapter
+│   │       ├── db.js         # Universal Database engine (replaces Supabase)
+│   │       ├── config.js     # Legacy config alias
 │   │       ├── main.js
 │   │       ├── actor.js
 │   │       ├── drama.js
@@ -54,7 +60,6 @@ K-List/
 │   └── watchlist.html        # Personal watchlist page
 ├── server.js                 # Standalone Node.js backend server & REST API
 ├── package.json              # Project scripts & metadata
-├── supabase-schema-and-seed.sql # Supabase PostgreSQL schema and seed data
 ├── index.html                # Root redirect to K-list
 └── README.md
 ```
@@ -65,36 +70,43 @@ K-List/
 | :--- | :--- | :--- | :--- |
 | **Client-Side** | UI & Logic | HTML5, CSS3, JavaScript | Handles the user interface, routing, and all data display logic. |
 | **Backend Server** | Server & REST API | **Node.js (`server.js`)** | Serves static assets, images from `assets/img/`, and REST API endpoints. |
-| **Server-Side** | Database | **Supabase (PostgreSQL) / Local** | Persistent storage for all dynamic data (Dramas, Actors, User Ratings). |
-| **Server-Side** | Authentication | **Supabase Auth / Local Session** | Manages user sign-up, sign-in, and session security. |
-| **Server-Side** | File Storage | **Local `assets/img/` / Supabase** | Stores all media files (posters, actor images). |
+| **Database** | Persistent Storage | **JSON / SQLite File DB (`data/klist-db.json`)** | Persistent storage for all dynamic data (Dramas, Actors, User Ratings, Watchlist). Never sleeps! |
+| **Client Database** | Local Engine | **`assets/js/db.js`** | Connects to Node API or browser storage, eliminating Supabase pausing issues. |
+| **Authentication** | Auth Manager | **Native Local Auth** | Manages user sign-up, sign-in, and session security. |
 
 ## 🚀 How to Run
 
-### Option 1: Running with the Node.js Backend Server (Recommended)
+### Running the App:
 
 1. Make sure you have [Node.js](https://nodejs.org/) installed.
 2. In your terminal, run:
    ```bash
    npm start
-   # or
-   node server.js
+   # or: node server.js
    ```
 3. Open your browser and navigate to:
    ```
    http://localhost:3000
    ```
-   The backend server automatically hosts the website and serves all drama posters and actor portraits from `assets/img/`.
+   All drama posters, actor portraits, reviews, and watchlists are immediately ready. Changes to reviews and watchlists are automatically saved to `data/klist-db.json`.
 
-### Option 2: Running with Supabase in the Cloud
+---
 
-1. Create a project at [supabase.com](https://supabase.com/).
-2. In the Supabase Dashboard, go to **SQL Editor** and paste the contents of `supabase-schema-and-seed.sql`, then click **Run**.
-3. In `K-list/assets/js/config.js`, update `SUPABASE_URL` and `SUPABASE_ANON_KEY` with your project's credentials.
+## ☁️ Cloud Database Alternatives (If Cloud is Desired)
+
+If you ever want a cloud database instead of a local file database, here are recommended alternatives that **never pause on the free tier**:
+
+| Provider | Type | Free Tier Sleep Policy | Notes |
+| :--- | :--- | :--- | :--- |
+| **Firebase Firestore** | NoSQL Document DB | **Never sleeps (24/7 active)** | 1GB free storage, instant real-time sync, great client SDK. |
+| **MongoDB Atlas** | Document DB | **Never sleeps (M0 Sandbox)** | 512MB free storage, always online. |
+| **Turso (LibSQL)** | Cloud SQLite | **Never sleeps** | 9GB free storage, ultra fast, SQLite syntax. |
+
+*(Supabase was pausing because its free tier puts databases to sleep after 7 days of inactivity).*
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you find a bug or have an idea for a new feature (like a rating system or better search), please feel free to:
+Contributions are welcome! If you find a bug or have an idea for a new feature, please feel free to:
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/NewFeature`)

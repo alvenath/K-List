@@ -1,0 +1,2956 @@
+{
+  "dramas": [
+    {
+      "id": 1,
+      "title": "Bon Appétit, Your Majesty",
+      "year": 2025,
+      "poster_url": "assets/img/poster/bon appetit.jpg",
+      "description": "Lita, a cheerful modern chef, suddenly finds herself in a royal palace and becomes the personal chef for Emperor Raynard.",
+      "trailer_url": "https://www.youtube.com/results?search_query=Bon+Appetit+Your+Majesty+kdrama+trailer",
+      "rating": 9.5,
+      "genreNames": [
+        "Romance",
+        "Comedy",
+        "Historical"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 1,
+          "character_name": "Lita / Chef",
+          "is_lead": true
+        },
+        {
+          "actor_id": 18,
+          "character_name": "Emperor Raynard",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Vincenzo",
+      "year": 2021,
+      "poster_url": "assets/img/poster/Vincenzo.jpg",
+      "description": "An Italian-Korean lawyer working for the mafia returns to Seoul to seek revenge, but his mission becomes even more dangerous when he gets entangled with a corrupt law firm.",
+      "trailer_url": "https://www.youtube.com/watch?v=_J8tYxSB_LQ",
+      "rating": 9.4,
+      "genreNames": [
+        "Action",
+        "Comedy",
+        "Crime"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 18,
+          "character_name": "Vincenzo Cassano",
+          "is_lead": true
+        },
+        {
+          "actor_id": 12,
+          "character_name": "Jang Jun-woo",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Crash Landing on You",
+      "year": 2019,
+      "poster_url": "assets/img/poster/cloy.jpg",
+      "description": "A wealthy chaebol heiress accidentally crash-lands in North Korea and unexpectedly falls in love with an army captain who risks everything to protect her.",
+      "trailer_url": "https://www.youtube.com/watch?v=eXMjTXL2Vks",
+      "rating": 9.6,
+      "genreNames": [
+        "Romance",
+        "Comedy",
+        "Drama"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 5,
+          "character_name": "Ri Jeong-hyeok",
+          "is_lead": true
+        },
+        {
+          "actor_id": 14,
+          "character_name": "Yoon Se-ri",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Twenty-Five Twenty-One",
+      "year": 2022,
+      "poster_url": "assets/img/poster/2521.jpg",
+      "description": "In a time when dreams seem out of reach, a teen fencer pursues big ambitions and meets a hardworking young man who seeks to rebuild his life.",
+      "trailer_url": "https://www.youtube.com/watch?v=gYp4cKuT-2U",
+      "rating": 9.1,
+      "genreNames": [
+        "Romance",
+        "Youth",
+        "Drama"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 7,
+          "character_name": "Na Hee-do",
+          "is_lead": true
+        },
+        {
+          "actor_id": 13,
+          "character_name": "Baek Yi-jin",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Alchemy of Souls",
+      "year": 2022,
+      "poster_url": "assets/img/poster/aos.jpg",
+      "description": "A powerful sorceress in a blind woman's body encounters a man from a prestigious family who wants her help to change his destiny.",
+      "trailer_url": "https://www.youtube.com/watch?v=H7447U6k-0Y",
+      "rating": 9.2,
+      "genreNames": [
+        "Fantasy",
+        "Action",
+        "Romance"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 2,
+          "character_name": "Nak-su / Cho Yeong",
+          "is_lead": true
+        },
+        {
+          "actor_id": 15,
+          "character_name": "Jang Uk",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "All of Us Are Dead",
+      "year": 2022,
+      "poster_url": "assets/img/poster/aouad.jpg",
+      "description": "A high school becomes ground zero for a zombie virus outbreak. Trapped students must fight their way out or turn into one of the infected.",
+      "trailer_url": "https://www.youtube.com/watch?v=IN5TD4VRcZU",
+      "rating": 8.8,
+      "genreNames": [
+        "Horror",
+        "Action",
+        "Thriller"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 21,
+          "character_name": "Lee Cheong-san",
+          "is_lead": true
+        },
+        {
+          "actor_id": 2,
+          "character_name": "Choi Nam-ra",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Castaway Diva",
+      "year": 2023,
+      "poster_url": "assets/img/poster/ctlbt.jpg",
+      "description": "Fifteen years after being stranded on a deserted island, an aspiring singer returns to society, undeterred by new challenges in pursuing her dream.",
+      "trailer_url": "https://www.youtube.com/watch?v=kYJ5oG9r_Vw",
+      "rating": 8.6,
+      "genreNames": [
+        "Romance",
+        "Comedy",
+        "Drama"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 14,
+          "character_name": "Seo Mok-ha",
+          "is_lead": true
+        },
+        {
+          "actor_id": 6,
+          "character_name": "Kang Bo-geol",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Doctor Slump",
+      "year": 2024,
+      "poster_url": "assets/img/poster/doctor-slump.jpg",
+      "description": "Two brilliant doctors who used to be rivals in high school reunite at the lowest point in their lives, finding comfort and romance in each other.",
+      "trailer_url": "https://www.youtube.com/watch?v=34aN8k8_J1s",
+      "rating": 8.7,
+      "genreNames": [
+        "Romance",
+        "Comedy",
+        "Medical"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 16,
+          "character_name": "Nam Ha-neul",
+          "is_lead": true
+        },
+        {
+          "actor_id": 15,
+          "character_name": "Yeo Jeong-woo",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Daily Dose of Sunshine",
+      "year": 2023,
+      "poster_url": "assets/img/poster/dotf.jpg",
+      "description": "A determined young nurse navigates the complex world of mental healthcare and the diverse lives of patients in a psychiatric ward.",
+      "trailer_url": "https://www.youtube.com/watch?v=hZ7W9fO6t9k",
+      "rating": 8.9,
+      "genreNames": [
+        "Medical",
+        "Drama"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 1,
+          "character_name": "Jung Da-eun",
+          "is_lead": true
+        },
+        {
+          "actor_id": 9,
+          "character_name": "Dong Go-geun",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Extraordinary Attorney Woo",
+      "year": 2022,
+      "poster_url": "assets/img/poster/eaw.jpg",
+      "description": "Brilliant attorney Woo Young-woo tackles challenges in the courtroom and beyond as a rookie at a top law firm and a woman on the autism spectrum.",
+      "trailer_url": "https://www.youtube.com/watch?v=9SdYFYflFbw",
+      "rating": 9.3,
+      "genreNames": [
+        "Legal",
+        "Drama",
+        "Comedy"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 14,
+          "character_name": "Woo Young-woo",
+          "is_lead": true
+        },
+        {
+          "actor_id": 6,
+          "character_name": "Lee Jun-ho",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Guardian: The Lonely and Great God (Goblin)",
+      "year": 2016,
+      "poster_url": "assets/img/poster/goblin.jpg",
+      "description": "An immortal goblin searches for his human bride to end his cursed eternal life, only to find himself falling deeply in love with her.",
+      "trailer_url": "https://www.youtube.com/watch?v=8AcNG_w9aXw",
+      "rating": 9.5,
+      "genreNames": [
+        "Fantasy",
+        "Romance",
+        "Drama"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 3,
+          "character_name": "Kim Shin (Goblin)",
+          "is_lead": true
+        },
+        {
+          "actor_id": 11,
+          "character_name": "Grim Reaper",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Good Boy",
+      "year": 2025,
+      "poster_url": "assets/img/poster/good-boy.jpg",
+      "description": "Olympic medalists become special police officers to combat violent crime and injustice using their unique athletic skills.",
+      "trailer_url": "https://www.youtube.com/results?search_query=Good+Boy+kdrama+trailer",
+      "rating": 9.1,
+      "genreNames": [
+        "Action",
+        "Comedy",
+        "Crime"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 18,
+          "character_name": "Yoon Dong-joo",
+          "is_lead": true
+        },
+        {
+          "actor_id": 8,
+          "character_name": "Ji Han-na",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Gyeongseong Creature",
+      "year": 2023,
+      "poster_url": "assets/img/poster/gyeongseong-creature.jpg",
+      "description": "In spring 1945 Gyeongseong during Japanese rule, an entrepreneur and a sleuth battle for survival against a monstrous creature born of human greed.",
+      "trailer_url": "https://www.youtube.com/watch?v=2N7t_g_Pz_s",
+      "rating": 8.8,
+      "genreNames": [
+        "Thriller",
+        "Historical",
+        "Action"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 15,
+          "character_name": "Jang Tae-sang",
+          "is_lead": true
+        },
+        {
+          "actor_id": 4,
+          "character_name": "Yoon Chae-ok",
+          "is_lead": true
+        },
+        {
+          "actor_id": 21,
+          "character_name": "Kwon Jun-taek",
+          "is_lead": false
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Hospital Playlist",
+      "year": 2020,
+      "poster_url": "assets/img/poster/hospital-playlist.jpg",
+      "description": "Five doctors who have been friends since medical school share a love for music while saving lives together at Yulje Medical Center.",
+      "trailer_url": "https://www.youtube.com/watch?v=N_8Vf_Xw0qA",
+      "rating": 9.4,
+      "genreNames": [
+        "Medical",
+        "Comedy",
+        "Drama"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 18,
+          "character_name": "Lee Ik-joon",
+          "is_lead": true
+        },
+        {
+          "actor_id": 17,
+          "character_name": "Chae Song-hwa",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Hometown Cha-Cha-Cha",
+      "year": 2021,
+      "poster_url": "assets/img/poster/htccc.jpg",
+      "description": "A big-city dentist opens a practice in a close-knit seaside village, home to a charming jack-of-all-trades who is her polar opposite.",
+      "trailer_url": "https://www.youtube.com/watch?v=wXbJk9s0a4A",
+      "rating": 9.2,
+      "genreNames": [
+        "Romance",
+        "Comedy"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 17,
+          "character_name": "Yoon Hye-jin",
+          "is_lead": true
+        },
+        {
+          "actor_id": 9,
+          "character_name": "Hong Du-sik",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "It's Okay to Not Be Okay",
+      "year": 2020,
+      "poster_url": "assets/img/poster/iotnbo.jpeg",
+      "description": "An antisocial children's book author and a selfless psychiatric ward caretaker heal each other's emotional and psychological wounds.",
+      "trailer_url": "https://www.youtube.com/watch?v=50ek4HQo0yc",
+      "rating": 9.3,
+      "genreNames": [
+        "Romance",
+        "Drama",
+        "Comedy"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 10,
+          "character_name": "Moon Gang-tae",
+          "is_lead": true
+        },
+        {
+          "actor_id": 14,
+          "character_name": "Ko Moon-young",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Itaewon Class",
+      "year": 2020,
+      "poster_url": "assets/img/poster/itaewon-class.jpg",
+      "description": "An ex-con and his ambitious crew fight to turn their ambitious street bar into a massive food franchise while getting revenge on a corrupt conglomerate.",
+      "trailer_url": "https://www.youtube.com/watch?v=NeaHNQJ1kKA",
+      "rating": 9,
+      "genreNames": [
+        "Drama",
+        "Romance"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 15,
+          "character_name": "Park Sae-ro-yi",
+          "is_lead": true
+        },
+        {
+          "actor_id": 7,
+          "character_name": "Jo Yi-seo",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Karma",
+      "year": 2025,
+      "poster_url": "assets/img/poster/karma.jpg",
+      "description": "Six individuals intertwined in an inescapable, ill-fated web of karma struggle to break free from their dark pasts and tragic destinies.",
+      "trailer_url": "https://www.youtube.com/results?search_query=Karma+kdrama+netflix+trailer",
+      "rating": 8.9,
+      "genreNames": [
+        "Crime",
+        "Thriller",
+        "Mystery"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 17,
+          "character_name": "Joo-yeon",
+          "is_lead": true
+        },
+        {
+          "actor_id": 21,
+          "character_name": "Gil-ho",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Love Next Door",
+      "year": 2024,
+      "poster_url": "assets/img/poster/love-next-door.jpg",
+      "description": "A successful architect reunites with his childhood friend when she returns to Korea to reset her life, rekindling feelings they tried to forget.",
+      "trailer_url": "https://www.youtube.com/watch?v=t_o7aJk8q_M",
+      "rating": 8.8,
+      "genreNames": [
+        "Romance",
+        "Comedy"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 6,
+          "character_name": "Choi Seung-hyo",
+          "is_lead": true
+        },
+        {
+          "actor_id": 8,
+          "character_name": "Bae Seok-ryu",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Lovely Runner",
+      "year": 2024,
+      "poster_url": "assets/img/poster/lovely-runner.png",
+      "description": "A devoted fan travels back in time to 2008 to save her favorite top star from a tragic fate, rewriting their destiny together.",
+      "trailer_url": "https://www.youtube.com/watch?v=wN4Nl_JqW9A",
+      "rating": 9.4,
+      "genreNames": [
+        "Romance",
+        "Fantasy",
+        "Comedy"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 11,
+          "character_name": "Ryu Sun-jae",
+          "is_lead": true
+        },
+        {
+          "actor_id": 7,
+          "character_name": "Im Sol",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "My Demon",
+      "year": 2023,
+      "poster_url": "assets/img/poster/mfn.jpg",
+      "description": "A pitiless 200-year-old demon temporarily loses his powers after getting entangled with a haughty, workaholic heiress, leading to a contract marriage.",
+      "trailer_url": "https://www.youtube.com/watch?v=F0Z7dE1Tq0E",
+      "rating": 8.9,
+      "genreNames": [
+        "Fantasy",
+        "Romance",
+        "Comedy"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 19,
+          "character_name": "Jeong Gu-won",
+          "is_lead": true
+        },
+        {
+          "actor_id": 2,
+          "character_name": "Do Do-hee",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Nevertheless",
+      "year": 2021,
+      "poster_url": "assets/img/poster/nevertheless.jpg",
+      "description": "The intoxicating charm of a flirtatious art school classmate pulls a heartbroken woman into a friends-with-benefits relationship despite her misgivings.",
+      "trailer_url": "https://www.youtube.com/watch?v=5rK3O1O_wJ8",
+      "rating": 8.3,
+      "genreNames": [
+        "Romance",
+        "Drama"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 19,
+          "character_name": "Park Jae-eon",
+          "is_lead": true
+        },
+        {
+          "actor_id": 4,
+          "character_name": "Yoo Na-bi",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Oh My Venus",
+      "year": 2015,
+      "poster_url": "assets/img/poster/oh-my-venus.jpg",
+      "description": "A stressed lawyer teams up with a world-renowned personal trainer to regain her health and confidence, discovering love along the way.",
+      "trailer_url": "https://www.youtube.com/watch?v=ZJ1-Wq9qA0A",
+      "rating": 8.5,
+      "genreNames": [
+        "Romance",
+        "Comedy"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 17,
+          "character_name": "Kang Joo-eun",
+          "is_lead": true
+        },
+        {
+          "actor_id": 5,
+          "character_name": "Kim Young-ho / John Kim",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Our Beloved Summer",
+      "year": 2021,
+      "poster_url": "assets/img/poster/ous.jpg",
+      "description": "Years after filming a viral high school documentary, two bickering ex-lovers are pulled back in front of the camera and into each other’s lives.",
+      "trailer_url": "https://www.youtube.com/watch?v=w3w908z_J2A",
+      "rating": 9,
+      "genreNames": [
+        "Romance",
+        "Comedy",
+        "Youth"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 7,
+          "character_name": "Kook Yeon-soo",
+          "is_lead": true
+        },
+        {
+          "actor_id": 11,
+          "character_name": "Choi Ung",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Queen of Tears",
+      "year": 2024,
+      "poster_url": "assets/img/poster/qot.jpg",
+      "description": "The queen of department stores and the prince of supermarkets weather a marital crisis, until a miraculous resurgence of love begins to bloom.",
+      "trailer_url": "https://www.youtube.com/watch?v=38fK8mP2tZc",
+      "rating": 9.5,
+      "genreNames": [
+        "Romance",
+        "Comedy",
+        "Drama"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 10,
+          "character_name": "Baek Hyun-woo",
+          "is_lead": true
+        },
+        {
+          "actor_id": 8,
+          "character_name": "Hong Hae-in",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "title": "Reply 1988",
+      "year": 2015,
+      "poster_url": "assets/img/poster/reply-1988.jpg",
+      "description": "A heartwarming journey back to 1988 Seoul following five childhood friends and their families living in the close-knit neighborhood of Ssangmundong.",
+      "trailer_url": "https://www.youtube.com/watch?v=pX_x0eU1L2M",
+      "rating": 9.6,
+      "genreNames": [
+        "Comedy",
+        "Romance",
+        "Youth"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 1,
+          "character_name": "Sung Deok-sun",
+          "is_lead": true
+        },
+        {
+          "actor_id": 9,
+          "character_name": "Kim Jung-hwan",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "title": "Resident Playbook",
+      "year": 2025,
+      "poster_url": "assets/img/poster/resident-playbook.jpg",
+      "description": "Spin-off of Hospital Playlist following the turbulent, earnest, and hilarious everyday lives of obstetrics and gynecology residents at Jongno Yulje Hospital.",
+      "trailer_url": "https://www.youtube.com/results?search_query=Resident+Playbook+kdrama+trailer",
+      "rating": 9.2,
+      "genreNames": [
+        "Medical",
+        "Comedy",
+        "Drama"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 2,
+          "character_name": "First-year OB-GYN Resident",
+          "is_lead": true
+        },
+        {
+          "actor_id": 12,
+          "character_name": "Fellow Doctor",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "title": "Squid Game",
+      "year": 2021,
+      "poster_url": "assets/img/poster/squid-game.jpg",
+      "description": "Hundreds of cash-strapped players accept a strange invitation to compete in children’s games for a tempting prize, with deadly high stakes.",
+      "trailer_url": "https://www.youtube.com/watch?v=oqxAJKy0ii4",
+      "rating": 9.1,
+      "genreNames": [
+        "Thriller",
+        "Action",
+        "Mystery"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 21,
+          "character_name": "Hwang Jun-ho",
+          "is_lead": true
+        },
+        {
+          "actor_id": 3,
+          "character_name": "The Salesman",
+          "is_lead": false
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "title": "Start-Up",
+      "year": 2020,
+      "poster_url": "assets/img/poster/start-up.jpg",
+      "description": "Young entrepreneurs aspiring to launch virtual dreams into reality compete for success and romance in the cutthroat world of Korea’s high-tech industry.",
+      "trailer_url": "https://www.youtube.com/watch?v=BemKyzbLDDw",
+      "rating": 8.9,
+      "genreNames": [
+        "Romance",
+        "Drama",
+        "Youth"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 1,
+          "character_name": "Seo Dal-mi",
+          "is_lead": true
+        },
+        {
+          "actor_id": 9,
+          "character_name": "Han Ji-pyeong",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "title": "Sweet Home",
+      "year": 2020,
+      "poster_url": "assets/img/poster/sweet-home.jpg",
+      "description": "As humans turn into savage monsters and wreak terror, one troubled teen and his apartment neighbors fight to hold onto their humanity and survive.",
+      "trailer_url": "https://www.youtube.com/watch?v=7rI56NmD33Y",
+      "rating": 8.8,
+      "genreNames": [
+        "Horror",
+        "Action",
+        "Thriller"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 19,
+          "character_name": "Cha Hyun-soo",
+          "is_lead": true
+        },
+        {
+          "actor_id": 2,
+          "character_name": "Park Yu-ri",
+          "is_lead": false
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "title": "The Atypical Family",
+      "year": 2024,
+      "poster_url": "assets/img/poster/taf.jpg",
+      "description": "Once blessed with unique superpowers, a family loses their abilities due to modern-day afflictions until a mysterious woman enters their lives.",
+      "trailer_url": "https://www.youtube.com/watch?v=aG0K0B8h1N4",
+      "rating": 8.7,
+      "genreNames": [
+        "Fantasy",
+        "Romance",
+        "Drama"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 13,
+          "character_name": "Bok Gwi-joo",
+          "is_lead": true
+        },
+        {
+          "actor_id": 8,
+          "character_name": "Do Da-hae",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "title": "The Glory",
+      "year": 2022,
+      "poster_url": "assets/img/poster/the-glory.jpg",
+      "description": "Years after surviving horrific abuse in high school, a woman puts an elaborate revenge scheme in motion to make the perpetrators pay for their crimes.",
+      "trailer_url": "https://www.youtube.com/watch?v=tqVVCS_ucFA",
+      "rating": 9.3,
+      "genreNames": [
+        "Thriller",
+        "Drama"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 14,
+          "character_name": "Moon Dong-eun",
+          "is_lead": true
+        },
+        {
+          "actor_id": 11,
+          "character_name": "Joo Yeo-jeong",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "title": "The Judge from Hell",
+      "year": 2024,
+      "poster_url": "assets/img/poster/tjfh.jpg",
+      "description": "A demon from hell possesses the body of an elite judge to punish remorseless criminals and send them straight to the underworld.",
+      "trailer_url": "https://www.youtube.com/watch?v=Qx_qV2N8H2A",
+      "rating": 9,
+      "genreNames": [
+        "Fantasy",
+        "Crime",
+        "Action"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 16,
+          "character_name": "Kang Bit-na / Justitia",
+          "is_lead": true
+        },
+        {
+          "actor_id": 6,
+          "character_name": "Han Da-on",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "title": "The Penthouse: War in Life",
+      "year": 2020,
+      "poster_url": "assets/img/poster/tpl.jpg",
+      "description": "Residents of Hera Palace, a luxury 100-floor penthouse apartment, harbor dark secrets and fierce rivalries driven by greed and ambition.",
+      "trailer_url": "https://www.youtube.com/watch?v=rW_8v0Y_xO0",
+      "rating": 8.9,
+      "genreNames": [
+        "Thriller",
+        "Mystery",
+        "Drama"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 16,
+          "character_name": "Shim Su-ryeon",
+          "is_lead": true
+        },
+        {
+          "actor_id": 5,
+          "character_name": "Joo Dan-tae",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "title": "Under the Queen's Umbrella",
+      "year": 2022,
+      "poster_url": "assets/img/poster/tq.jpg",
+      "description": "A spirited queen navigates palace rivalries and political intrigue while striving to rein in her unruly sons to turn one of them into the next Joseon king.",
+      "trailer_url": "https://www.youtube.com/watch?v=oV8I9x6qK_M",
+      "rating": 9.2,
+      "genreNames": [
+        "Historical",
+        "Comedy",
+        "Drama"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 17,
+          "character_name": "Queen Im Hwa-ryeong",
+          "is_lead": true
+        },
+        {
+          "actor_id": 18,
+          "character_name": "Grand Prince Seong-nam",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "title": "Twinkling Watermelon",
+      "year": 2023,
+      "poster_url": "assets/img/poster/ttc.jpg",
+      "description": "A CODA high school student with a gift for music time travels to 1995, where he forms a band with the teenage version of his father.",
+      "trailer_url": "https://www.youtube.com/watch?v=bY2J8q_W7kA",
+      "rating": 9.3,
+      "genreNames": [
+        "Youth",
+        "Fantasy",
+        "Romance",
+        "Comedy"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 19,
+          "character_name": "Ha Eun-gyeol",
+          "is_lead": true
+        },
+        {
+          "actor_id": 2,
+          "character_name": "Choi Se-kyung",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "title": "Vagabond",
+      "year": 2019,
+      "poster_url": "assets/img/poster/vagabond.jpg",
+      "description": "When a mysterious plane crash kills his nephew, a stuntman embarks on a dangerous quest to uncover a massive national corruption conspiracy.",
+      "trailer_url": "https://www.youtube.com/watch?v=2Tz8X-GvO2A",
+      "rating": 9,
+      "genreNames": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 1,
+          "character_name": "Go Hae-ri",
+          "is_lead": true
+        },
+        {
+          "actor_id": 6,
+          "character_name": "Cha Dal-gun",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "title": "When Life Gives You Tangerines",
+      "year": 2025,
+      "poster_url": "assets/img/poster/wlgyt.jpg",
+      "description": "Follows the adventurous and bittersweet lives of Ae-soon, a rebellious dreamer, and Gwan-sik, an unyielding man of action, born on Jeju Island in the 1950s.",
+      "trailer_url": "https://www.youtube.com/results?search_query=When+Life+Gives+You+Tangerines+kdrama+trailer",
+      "rating": 9.3,
+      "genreNames": [
+        "Romance",
+        "Drama",
+        "Youth"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 20,
+          "character_name": "Ae-soon",
+          "is_lead": true
+        },
+        {
+          "actor_id": 15,
+          "character_name": "Gwan-sik",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "title": "What's Wrong with Secretary Kim",
+      "year": 2018,
+      "poster_url": "assets/img/poster/wtpr.jpg",
+      "description": "An egotistical vice chairman of a major company is thrown into turmoil when his capable secretary of nine years suddenly announces her resignation.",
+      "trailer_url": "https://www.youtube.com/watch?v=x7E2P_P4y_0",
+      "rating": 9.1,
+      "genreNames": [
+        "Romance",
+        "Comedy"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 15,
+          "character_name": "Lee Young-joon",
+          "is_lead": true
+        },
+        {
+          "actor_id": 14,
+          "character_name": "Kim Mi-so",
+          "is_lead": true
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "title": "Welcome to Samdal-ri",
+      "year": 2023,
+      "poster_url": "assets/img/poster/wts.jpg",
+      "description": "After suffering a sudden fall from grace, a famous fashion photographer returns to her hometown on Jeju Island and reconnects with her childhood best friend.",
+      "trailer_url": "https://www.youtube.com/watch?v=9_n7Lw3pY1E",
+      "rating": 8.9,
+      "genreNames": [
+        "Romance",
+        "Comedy",
+        "Drama"
+      ],
+      "castMembers": [
+        {
+          "actor_id": 6,
+          "character_name": "Cho Yong-pil",
+          "is_lead": true
+        },
+        {
+          "actor_id": 8,
+          "character_name": "Cho Sam-dal",
+          "is_lead": true
+        }
+      ]
+    }
+  ],
+  "actors": [
+    {
+      "id": 1,
+      "name": "Bae Suzy",
+      "birth_year": 1994,
+      "gender": "Wanita",
+      "photo_url": "assets/img/actors/bae-suzy.jpg",
+      "bio": "Nation's first love, celebrated actress and singer starring in Start-Up, Vagabond, and Doona!."
+    },
+    {
+      "id": 2,
+      "name": "Go Youn-jung",
+      "birth_year": 1996,
+      "gender": "Wanita",
+      "photo_url": "assets/img/actors/go-youn-jung.jpg",
+      "bio": "Critically acclaimed actress recognized for Alchemy of Souls, Moving, Sweet Home, and Resident Playbook."
+    },
+    {
+      "id": 3,
+      "name": "Gong Yoo",
+      "birth_year": 1979,
+      "gender": "Pria",
+      "photo_url": "assets/img/actors/gong-yoo.png",
+      "bio": "Iconic global star famed for Goblin, Train to Busan, Coffee Prince, and Squid Game."
+    },
+    {
+      "id": 4,
+      "name": "Han So-hee",
+      "birth_year": 1994,
+      "gender": "Wanita",
+      "photo_url": "assets/img/actors/Han-So-Hee.jpeg",
+      "bio": "Dynamic actress celebrated for The World of the Married, Nevertheless, My Name, and Gyeongseong Creature."
+    },
+    {
+      "id": 5,
+      "name": "Hyun Bin",
+      "birth_year": 1982,
+      "gender": "Pria",
+      "photo_url": "assets/img/actors/hyun-bin.jpg",
+      "bio": "Legendary Hallyu leading actor renowned for Crash Landing on You, Secret Garden, and Memories of the Alhambra."
+    },
+    {
+      "id": 6,
+      "name": "Ji Chang-wook",
+      "birth_year": 1987,
+      "gender": "Pria",
+      "photo_url": "assets/img/actors/ji-chang-wook.png",
+      "bio": "Electrifying action and romance powerhouse star of Welcome to Samdal-ri, Healer, and The K2."
+    },
+    {
+      "id": 7,
+      "name": "Kim Da-mi",
+      "birth_year": 1995,
+      "gender": "Wanita",
+      "photo_url": "assets/img/actors/kim-da-mi.jpg",
+      "bio": "Sensational talent acclaimed for Itaewon Class, Our Beloved Summer, and The Witch."
+    },
+    {
+      "id": 8,
+      "name": "Kim Ji-won",
+      "birth_year": 1992,
+      "gender": "Wanita",
+      "photo_url": "assets/img/actors/kim-ji-won.jpg",
+      "bio": "Beloved top actress famed for Queen of Tears, Descendants of the Sun, and Fight for My Way."
+    },
+    {
+      "id": 9,
+      "name": "Kim Seon-ho",
+      "birth_year": 1986,
+      "gender": "Pria",
+      "photo_url": "assets/img/actors/kim-seon-ho.jpg",
+      "bio": "Charming leading actor of Hometown Cha-Cha-Cha, Start-Up, and The Childe."
+    },
+    {
+      "id": 10,
+      "name": "Kim Soo-hyun",
+      "birth_year": 1988,
+      "gender": "Pria",
+      "photo_url": "assets/img/actors/kim-soo-hyun.jpg",
+      "bio": "One of Korea's highest-paid top actors, celebrated for Queen of Tears, It's Okay to Not Be Okay, and My Love from the Star."
+    },
+    {
+      "id": 11,
+      "name": "Lee Jong-suk",
+      "birth_year": 1989,
+      "gender": "Pria",
+      "photo_url": "assets/img/actors/lee-jong-suk.jpg",
+      "bio": "Award-winning leading man of Big Mouth, W: Two Worlds, and While You Were Sleeping."
+    },
+    {
+      "id": 12,
+      "name": "Lee Jun-ho",
+      "birth_year": 1990,
+      "gender": "Pria",
+      "photo_url": "assets/img/actors/lee-jun-ho.jpeg",
+      "bio": "Baeksang Best Actor recipient and 2PM member known for King the Land and The Red Sleeve."
+    },
+    {
+      "id": 13,
+      "name": "Lee Min-ho",
+      "birth_year": 1987,
+      "gender": "Pria",
+      "photo_url": "assets/img/actors/lee-min-ho.jpeg",
+      "bio": "Global Hallyu megastar recognized for The King: Eternal Monarch, Boys Over Flowers, and Pachinko."
+    },
+    {
+      "id": 14,
+      "name": "Park Min-young",
+      "birth_year": 1986,
+      "gender": "Wanita",
+      "photo_url": "assets/img/actors/park-min-young.jpg",
+      "bio": "Rom-com royalty known for What's Wrong with Secretary Kim, Marry My Husband, and Healer."
+    },
+    {
+      "id": 15,
+      "name": "Park Seo-joon",
+      "birth_year": 1988,
+      "gender": "Pria",
+      "photo_url": "assets/img/actors/park-seo-joon.jpeg",
+      "bio": "Prolific international icon starring in Itaewon Class, What's Wrong with Secretary Kim, and Gyeongseong Creature."
+    },
+    {
+      "id": 16,
+      "name": "Park Shin-hye",
+      "birth_year": 1990,
+      "gender": "Wanita",
+      "photo_url": "assets/img/actors/park-shin-hye.jpg",
+      "bio": "Esteemed versatile actress famous for The Judge from Hell, Doctor Slump, Pinocchio, and The Heirs."
+    },
+    {
+      "id": 17,
+      "name": "Shin Min-a",
+      "birth_year": 1984,
+      "gender": "Wanita",
+      "photo_url": "assets/img/actors/sin-min-ah.jpg",
+      "bio": "Beloved veteran actress leading Hometown Cha-Cha-Cha, Oh My Venus, and Karma."
+    },
+    {
+      "id": 18,
+      "name": "Song Joong-ki",
+      "birth_year": 1985,
+      "gender": "Pria",
+      "photo_url": "assets/img/actors/song-joong-ki.jpg",
+      "bio": "Top actor renowned for Vincenzo, Descendants of the Sun, and Reborn Rich."
+    },
+    {
+      "id": 19,
+      "name": "Song Kang",
+      "birth_year": 1994,
+      "gender": "Pria",
+      "photo_url": "assets/img/actors/songkang.jpeg",
+      "bio": "Global favorite nicknamed Son of Netflix, starring in Sweet Home, Nevertheless, and My Demon."
+    },
+    {
+      "id": 20,
+      "name": "IU (Lee Ji-eun)",
+      "birth_year": 1993,
+      "gender": "Wanita",
+      "photo_url": "assets/img/actors/UI.jpg",
+      "bio": "Legendary solo artist and acclaimed actress known for Hotel Del Luna, My Mister, and When Life Gives You Tangerines."
+    },
+    {
+      "id": 21,
+      "name": "Wi Ha-joon",
+      "birth_year": 1991,
+      "gender": "Pria",
+      "photo_url": "assets/img/actors/wi-ha-joon.jpg",
+      "bio": "Charismatic action star recognized globally in Squid Game, Bad and Crazy, and Gyeongseong Creature."
+    }
+  ],
+  "genres": [
+    {
+      "id": 1,
+      "name": "Romance"
+    },
+    {
+      "id": 2,
+      "name": "Comedy"
+    },
+    {
+      "id": 3,
+      "name": "Action"
+    },
+    {
+      "id": 4,
+      "name": "Thriller"
+    },
+    {
+      "id": 5,
+      "name": "Mystery"
+    },
+    {
+      "id": 6,
+      "name": "Crime"
+    },
+    {
+      "id": 7,
+      "name": "Fantasy"
+    },
+    {
+      "id": 8,
+      "name": "Historical"
+    },
+    {
+      "id": 9,
+      "name": "Medical"
+    },
+    {
+      "id": 10,
+      "name": "Legal"
+    },
+    {
+      "id": 11,
+      "name": "School"
+    },
+    {
+      "id": 12,
+      "name": "Horror"
+    },
+    {
+      "id": 13,
+      "name": "Youth"
+    },
+    {
+      "id": 14,
+      "name": "Drama"
+    }
+  ],
+  "drama_genres": [
+    {
+      "drama_id": 1,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 1,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 1,
+      "genre_id": 8,
+      "genres": {
+        "name": "Historical"
+      }
+    },
+    {
+      "drama_id": 2,
+      "genre_id": 3,
+      "genres": {
+        "name": "Action"
+      }
+    },
+    {
+      "drama_id": 2,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 2,
+      "genre_id": 6,
+      "genres": {
+        "name": "Crime"
+      }
+    },
+    {
+      "drama_id": 3,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 3,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 3,
+      "genre_id": 14,
+      "genres": {
+        "name": "Drama"
+      }
+    },
+    {
+      "drama_id": 4,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 4,
+      "genre_id": 13,
+      "genres": {
+        "name": "Youth"
+      }
+    },
+    {
+      "drama_id": 4,
+      "genre_id": 14,
+      "genres": {
+        "name": "Drama"
+      }
+    },
+    {
+      "drama_id": 5,
+      "genre_id": 7,
+      "genres": {
+        "name": "Fantasy"
+      }
+    },
+    {
+      "drama_id": 5,
+      "genre_id": 3,
+      "genres": {
+        "name": "Action"
+      }
+    },
+    {
+      "drama_id": 5,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 6,
+      "genre_id": 12,
+      "genres": {
+        "name": "Horror"
+      }
+    },
+    {
+      "drama_id": 6,
+      "genre_id": 3,
+      "genres": {
+        "name": "Action"
+      }
+    },
+    {
+      "drama_id": 6,
+      "genre_id": 4,
+      "genres": {
+        "name": "Thriller"
+      }
+    },
+    {
+      "drama_id": 7,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 7,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 7,
+      "genre_id": 14,
+      "genres": {
+        "name": "Drama"
+      }
+    },
+    {
+      "drama_id": 8,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 8,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 8,
+      "genre_id": 9,
+      "genres": {
+        "name": "Medical"
+      }
+    },
+    {
+      "drama_id": 9,
+      "genre_id": 9,
+      "genres": {
+        "name": "Medical"
+      }
+    },
+    {
+      "drama_id": 9,
+      "genre_id": 14,
+      "genres": {
+        "name": "Drama"
+      }
+    },
+    {
+      "drama_id": 10,
+      "genre_id": 10,
+      "genres": {
+        "name": "Legal"
+      }
+    },
+    {
+      "drama_id": 10,
+      "genre_id": 14,
+      "genres": {
+        "name": "Drama"
+      }
+    },
+    {
+      "drama_id": 10,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 11,
+      "genre_id": 7,
+      "genres": {
+        "name": "Fantasy"
+      }
+    },
+    {
+      "drama_id": 11,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 11,
+      "genre_id": 14,
+      "genres": {
+        "name": "Drama"
+      }
+    },
+    {
+      "drama_id": 12,
+      "genre_id": 3,
+      "genres": {
+        "name": "Action"
+      }
+    },
+    {
+      "drama_id": 12,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 12,
+      "genre_id": 6,
+      "genres": {
+        "name": "Crime"
+      }
+    },
+    {
+      "drama_id": 13,
+      "genre_id": 4,
+      "genres": {
+        "name": "Thriller"
+      }
+    },
+    {
+      "drama_id": 13,
+      "genre_id": 8,
+      "genres": {
+        "name": "Historical"
+      }
+    },
+    {
+      "drama_id": 13,
+      "genre_id": 3,
+      "genres": {
+        "name": "Action"
+      }
+    },
+    {
+      "drama_id": 14,
+      "genre_id": 9,
+      "genres": {
+        "name": "Medical"
+      }
+    },
+    {
+      "drama_id": 14,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 14,
+      "genre_id": 14,
+      "genres": {
+        "name": "Drama"
+      }
+    },
+    {
+      "drama_id": 15,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 15,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 16,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 16,
+      "genre_id": 14,
+      "genres": {
+        "name": "Drama"
+      }
+    },
+    {
+      "drama_id": 16,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 17,
+      "genre_id": 14,
+      "genres": {
+        "name": "Drama"
+      }
+    },
+    {
+      "drama_id": 17,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 18,
+      "genre_id": 6,
+      "genres": {
+        "name": "Crime"
+      }
+    },
+    {
+      "drama_id": 18,
+      "genre_id": 4,
+      "genres": {
+        "name": "Thriller"
+      }
+    },
+    {
+      "drama_id": 18,
+      "genre_id": 5,
+      "genres": {
+        "name": "Mystery"
+      }
+    },
+    {
+      "drama_id": 19,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 19,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 20,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 20,
+      "genre_id": 7,
+      "genres": {
+        "name": "Fantasy"
+      }
+    },
+    {
+      "drama_id": 20,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 21,
+      "genre_id": 7,
+      "genres": {
+        "name": "Fantasy"
+      }
+    },
+    {
+      "drama_id": 21,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 21,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 22,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 22,
+      "genre_id": 14,
+      "genres": {
+        "name": "Drama"
+      }
+    },
+    {
+      "drama_id": 23,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 23,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 24,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 24,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 24,
+      "genre_id": 13,
+      "genres": {
+        "name": "Youth"
+      }
+    },
+    {
+      "drama_id": 25,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 25,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 25,
+      "genre_id": 14,
+      "genres": {
+        "name": "Drama"
+      }
+    },
+    {
+      "drama_id": 26,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 26,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 26,
+      "genre_id": 13,
+      "genres": {
+        "name": "Youth"
+      }
+    },
+    {
+      "drama_id": 27,
+      "genre_id": 9,
+      "genres": {
+        "name": "Medical"
+      }
+    },
+    {
+      "drama_id": 27,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 27,
+      "genre_id": 14,
+      "genres": {
+        "name": "Drama"
+      }
+    },
+    {
+      "drama_id": 28,
+      "genre_id": 4,
+      "genres": {
+        "name": "Thriller"
+      }
+    },
+    {
+      "drama_id": 28,
+      "genre_id": 3,
+      "genres": {
+        "name": "Action"
+      }
+    },
+    {
+      "drama_id": 28,
+      "genre_id": 5,
+      "genres": {
+        "name": "Mystery"
+      }
+    },
+    {
+      "drama_id": 29,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 29,
+      "genre_id": 14,
+      "genres": {
+        "name": "Drama"
+      }
+    },
+    {
+      "drama_id": 29,
+      "genre_id": 13,
+      "genres": {
+        "name": "Youth"
+      }
+    },
+    {
+      "drama_id": 30,
+      "genre_id": 12,
+      "genres": {
+        "name": "Horror"
+      }
+    },
+    {
+      "drama_id": 30,
+      "genre_id": 3,
+      "genres": {
+        "name": "Action"
+      }
+    },
+    {
+      "drama_id": 30,
+      "genre_id": 4,
+      "genres": {
+        "name": "Thriller"
+      }
+    },
+    {
+      "drama_id": 31,
+      "genre_id": 7,
+      "genres": {
+        "name": "Fantasy"
+      }
+    },
+    {
+      "drama_id": 31,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 31,
+      "genre_id": 14,
+      "genres": {
+        "name": "Drama"
+      }
+    },
+    {
+      "drama_id": 32,
+      "genre_id": 4,
+      "genres": {
+        "name": "Thriller"
+      }
+    },
+    {
+      "drama_id": 32,
+      "genre_id": 14,
+      "genres": {
+        "name": "Drama"
+      }
+    },
+    {
+      "drama_id": 33,
+      "genre_id": 7,
+      "genres": {
+        "name": "Fantasy"
+      }
+    },
+    {
+      "drama_id": 33,
+      "genre_id": 6,
+      "genres": {
+        "name": "Crime"
+      }
+    },
+    {
+      "drama_id": 33,
+      "genre_id": 3,
+      "genres": {
+        "name": "Action"
+      }
+    },
+    {
+      "drama_id": 34,
+      "genre_id": 4,
+      "genres": {
+        "name": "Thriller"
+      }
+    },
+    {
+      "drama_id": 34,
+      "genre_id": 5,
+      "genres": {
+        "name": "Mystery"
+      }
+    },
+    {
+      "drama_id": 34,
+      "genre_id": 14,
+      "genres": {
+        "name": "Drama"
+      }
+    },
+    {
+      "drama_id": 35,
+      "genre_id": 8,
+      "genres": {
+        "name": "Historical"
+      }
+    },
+    {
+      "drama_id": 35,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 35,
+      "genre_id": 14,
+      "genres": {
+        "name": "Drama"
+      }
+    },
+    {
+      "drama_id": 36,
+      "genre_id": 13,
+      "genres": {
+        "name": "Youth"
+      }
+    },
+    {
+      "drama_id": 36,
+      "genre_id": 7,
+      "genres": {
+        "name": "Fantasy"
+      }
+    },
+    {
+      "drama_id": 36,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 36,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 37,
+      "genre_id": 3,
+      "genres": {
+        "name": "Action"
+      }
+    },
+    {
+      "drama_id": 37,
+      "genre_id": 4,
+      "genres": {
+        "name": "Thriller"
+      }
+    },
+    {
+      "drama_id": 37,
+      "genre_id": 6,
+      "genres": {
+        "name": "Crime"
+      }
+    },
+    {
+      "drama_id": 38,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 38,
+      "genre_id": 14,
+      "genres": {
+        "name": "Drama"
+      }
+    },
+    {
+      "drama_id": 38,
+      "genre_id": 13,
+      "genres": {
+        "name": "Youth"
+      }
+    },
+    {
+      "drama_id": 39,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 39,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 40,
+      "genre_id": 1,
+      "genres": {
+        "name": "Romance"
+      }
+    },
+    {
+      "drama_id": 40,
+      "genre_id": 2,
+      "genres": {
+        "name": "Comedy"
+      }
+    },
+    {
+      "drama_id": 40,
+      "genre_id": 14,
+      "genres": {
+        "name": "Drama"
+      }
+    }
+  ],
+  "drama_actors": [
+    {
+      "drama_id": 1,
+      "actor_id": 1,
+      "character_name": "Lita / Chef",
+      "is_lead": true,
+      "actors": {
+        "name": "Bae Suzy",
+        "photo_url": "assets/img/actors/bae-suzy.jpg"
+      }
+    },
+    {
+      "drama_id": 9,
+      "actor_id": 1,
+      "character_name": "Jung Da-eun",
+      "is_lead": true,
+      "actors": {
+        "name": "Bae Suzy",
+        "photo_url": "assets/img/actors/bae-suzy.jpg"
+      }
+    },
+    {
+      "drama_id": 26,
+      "actor_id": 1,
+      "character_name": "Sung Deok-sun",
+      "is_lead": true,
+      "actors": {
+        "name": "Bae Suzy",
+        "photo_url": "assets/img/actors/bae-suzy.jpg"
+      }
+    },
+    {
+      "drama_id": 29,
+      "actor_id": 1,
+      "character_name": "Seo Dal-mi",
+      "is_lead": true,
+      "actors": {
+        "name": "Bae Suzy",
+        "photo_url": "assets/img/actors/bae-suzy.jpg"
+      }
+    },
+    {
+      "drama_id": 37,
+      "actor_id": 1,
+      "character_name": "Go Hae-ri",
+      "is_lead": true,
+      "actors": {
+        "name": "Bae Suzy",
+        "photo_url": "assets/img/actors/bae-suzy.jpg"
+      }
+    },
+    {
+      "drama_id": 5,
+      "actor_id": 2,
+      "character_name": "Nak-su / Cho Yeong",
+      "is_lead": true,
+      "actors": {
+        "name": "Go Youn-jung",
+        "photo_url": "assets/img/actors/go-youn-jung.jpg"
+      }
+    },
+    {
+      "drama_id": 6,
+      "actor_id": 2,
+      "character_name": "Choi Nam-ra",
+      "is_lead": true,
+      "actors": {
+        "name": "Go Youn-jung",
+        "photo_url": "assets/img/actors/go-youn-jung.jpg"
+      }
+    },
+    {
+      "drama_id": 21,
+      "actor_id": 2,
+      "character_name": "Do Do-hee",
+      "is_lead": true,
+      "actors": {
+        "name": "Go Youn-jung",
+        "photo_url": "assets/img/actors/go-youn-jung.jpg"
+      }
+    },
+    {
+      "drama_id": 27,
+      "actor_id": 2,
+      "character_name": "First-year OB-GYN Resident",
+      "is_lead": true,
+      "actors": {
+        "name": "Go Youn-jung",
+        "photo_url": "assets/img/actors/go-youn-jung.jpg"
+      }
+    },
+    {
+      "drama_id": 30,
+      "actor_id": 2,
+      "character_name": "Park Yu-ri",
+      "is_lead": false,
+      "actors": {
+        "name": "Go Youn-jung",
+        "photo_url": "assets/img/actors/go-youn-jung.jpg"
+      }
+    },
+    {
+      "drama_id": 36,
+      "actor_id": 2,
+      "character_name": "Choi Se-kyung",
+      "is_lead": true,
+      "actors": {
+        "name": "Go Youn-jung",
+        "photo_url": "assets/img/actors/go-youn-jung.jpg"
+      }
+    },
+    {
+      "drama_id": 11,
+      "actor_id": 3,
+      "character_name": "Kim Shin (Goblin)",
+      "is_lead": true,
+      "actors": {
+        "name": "Gong Yoo",
+        "photo_url": "assets/img/actors/gong-yoo.png"
+      }
+    },
+    {
+      "drama_id": 28,
+      "actor_id": 3,
+      "character_name": "The Salesman",
+      "is_lead": false,
+      "actors": {
+        "name": "Gong Yoo",
+        "photo_url": "assets/img/actors/gong-yoo.png"
+      }
+    },
+    {
+      "drama_id": 13,
+      "actor_id": 4,
+      "character_name": "Yoon Chae-ok",
+      "is_lead": true,
+      "actors": {
+        "name": "Han So-hee",
+        "photo_url": "assets/img/actors/Han-So-Hee.jpeg"
+      }
+    },
+    {
+      "drama_id": 22,
+      "actor_id": 4,
+      "character_name": "Yoo Na-bi",
+      "is_lead": true,
+      "actors": {
+        "name": "Han So-hee",
+        "photo_url": "assets/img/actors/Han-So-Hee.jpeg"
+      }
+    },
+    {
+      "drama_id": 3,
+      "actor_id": 5,
+      "character_name": "Ri Jeong-hyeok",
+      "is_lead": true,
+      "actors": {
+        "name": "Hyun Bin",
+        "photo_url": "assets/img/actors/hyun-bin.jpg"
+      }
+    },
+    {
+      "drama_id": 23,
+      "actor_id": 5,
+      "character_name": "Kim Young-ho / John Kim",
+      "is_lead": true,
+      "actors": {
+        "name": "Hyun Bin",
+        "photo_url": "assets/img/actors/hyun-bin.jpg"
+      }
+    },
+    {
+      "drama_id": 34,
+      "actor_id": 5,
+      "character_name": "Joo Dan-tae",
+      "is_lead": true,
+      "actors": {
+        "name": "Hyun Bin",
+        "photo_url": "assets/img/actors/hyun-bin.jpg"
+      }
+    },
+    {
+      "drama_id": 7,
+      "actor_id": 6,
+      "character_name": "Kang Bo-geol",
+      "is_lead": true,
+      "actors": {
+        "name": "Ji Chang-wook",
+        "photo_url": "assets/img/actors/ji-chang-wook.png"
+      }
+    },
+    {
+      "drama_id": 10,
+      "actor_id": 6,
+      "character_name": "Lee Jun-ho",
+      "is_lead": true,
+      "actors": {
+        "name": "Ji Chang-wook",
+        "photo_url": "assets/img/actors/ji-chang-wook.png"
+      }
+    },
+    {
+      "drama_id": 19,
+      "actor_id": 6,
+      "character_name": "Choi Seung-hyo",
+      "is_lead": true,
+      "actors": {
+        "name": "Ji Chang-wook",
+        "photo_url": "assets/img/actors/ji-chang-wook.png"
+      }
+    },
+    {
+      "drama_id": 33,
+      "actor_id": 6,
+      "character_name": "Han Da-on",
+      "is_lead": true,
+      "actors": {
+        "name": "Ji Chang-wook",
+        "photo_url": "assets/img/actors/ji-chang-wook.png"
+      }
+    },
+    {
+      "drama_id": 37,
+      "actor_id": 6,
+      "character_name": "Cha Dal-gun",
+      "is_lead": true,
+      "actors": {
+        "name": "Ji Chang-wook",
+        "photo_url": "assets/img/actors/ji-chang-wook.png"
+      }
+    },
+    {
+      "drama_id": 40,
+      "actor_id": 6,
+      "character_name": "Cho Yong-pil",
+      "is_lead": true,
+      "actors": {
+        "name": "Ji Chang-wook",
+        "photo_url": "assets/img/actors/ji-chang-wook.png"
+      }
+    },
+    {
+      "drama_id": 4,
+      "actor_id": 7,
+      "character_name": "Na Hee-do",
+      "is_lead": true,
+      "actors": {
+        "name": "Kim Da-mi",
+        "photo_url": "assets/img/actors/kim-da-mi.jpg"
+      }
+    },
+    {
+      "drama_id": 17,
+      "actor_id": 7,
+      "character_name": "Jo Yi-seo",
+      "is_lead": true,
+      "actors": {
+        "name": "Kim Da-mi",
+        "photo_url": "assets/img/actors/kim-da-mi.jpg"
+      }
+    },
+    {
+      "drama_id": 20,
+      "actor_id": 7,
+      "character_name": "Im Sol",
+      "is_lead": true,
+      "actors": {
+        "name": "Kim Da-mi",
+        "photo_url": "assets/img/actors/kim-da-mi.jpg"
+      }
+    },
+    {
+      "drama_id": 24,
+      "actor_id": 7,
+      "character_name": "Kook Yeon-soo",
+      "is_lead": true,
+      "actors": {
+        "name": "Kim Da-mi",
+        "photo_url": "assets/img/actors/kim-da-mi.jpg"
+      }
+    },
+    {
+      "drama_id": 12,
+      "actor_id": 8,
+      "character_name": "Ji Han-na",
+      "is_lead": true,
+      "actors": {
+        "name": "Kim Ji-won",
+        "photo_url": "assets/img/actors/kim-ji-won.jpg"
+      }
+    },
+    {
+      "drama_id": 19,
+      "actor_id": 8,
+      "character_name": "Bae Seok-ryu",
+      "is_lead": true,
+      "actors": {
+        "name": "Kim Ji-won",
+        "photo_url": "assets/img/actors/kim-ji-won.jpg"
+      }
+    },
+    {
+      "drama_id": 25,
+      "actor_id": 8,
+      "character_name": "Hong Hae-in",
+      "is_lead": true,
+      "actors": {
+        "name": "Kim Ji-won",
+        "photo_url": "assets/img/actors/kim-ji-won.jpg"
+      }
+    },
+    {
+      "drama_id": 31,
+      "actor_id": 8,
+      "character_name": "Do Da-hae",
+      "is_lead": true,
+      "actors": {
+        "name": "Kim Ji-won",
+        "photo_url": "assets/img/actors/kim-ji-won.jpg"
+      }
+    },
+    {
+      "drama_id": 40,
+      "actor_id": 8,
+      "character_name": "Cho Sam-dal",
+      "is_lead": true,
+      "actors": {
+        "name": "Kim Ji-won",
+        "photo_url": "assets/img/actors/kim-ji-won.jpg"
+      }
+    },
+    {
+      "drama_id": 9,
+      "actor_id": 9,
+      "character_name": "Dong Go-geun",
+      "is_lead": true,
+      "actors": {
+        "name": "Kim Seon-ho",
+        "photo_url": "assets/img/actors/kim-seon-ho.jpg"
+      }
+    },
+    {
+      "drama_id": 15,
+      "actor_id": 9,
+      "character_name": "Hong Du-sik",
+      "is_lead": true,
+      "actors": {
+        "name": "Kim Seon-ho",
+        "photo_url": "assets/img/actors/kim-seon-ho.jpg"
+      }
+    },
+    {
+      "drama_id": 26,
+      "actor_id": 9,
+      "character_name": "Kim Jung-hwan",
+      "is_lead": true,
+      "actors": {
+        "name": "Kim Seon-ho",
+        "photo_url": "assets/img/actors/kim-seon-ho.jpg"
+      }
+    },
+    {
+      "drama_id": 29,
+      "actor_id": 9,
+      "character_name": "Han Ji-pyeong",
+      "is_lead": true,
+      "actors": {
+        "name": "Kim Seon-ho",
+        "photo_url": "assets/img/actors/kim-seon-ho.jpg"
+      }
+    },
+    {
+      "drama_id": 16,
+      "actor_id": 10,
+      "character_name": "Moon Gang-tae",
+      "is_lead": true,
+      "actors": {
+        "name": "Kim Soo-hyun",
+        "photo_url": "assets/img/actors/kim-soo-hyun.jpg"
+      }
+    },
+    {
+      "drama_id": 25,
+      "actor_id": 10,
+      "character_name": "Baek Hyun-woo",
+      "is_lead": true,
+      "actors": {
+        "name": "Kim Soo-hyun",
+        "photo_url": "assets/img/actors/kim-soo-hyun.jpg"
+      }
+    },
+    {
+      "drama_id": 11,
+      "actor_id": 11,
+      "character_name": "Grim Reaper",
+      "is_lead": true,
+      "actors": {
+        "name": "Lee Jong-suk",
+        "photo_url": "assets/img/actors/lee-jong-suk.jpg"
+      }
+    },
+    {
+      "drama_id": 20,
+      "actor_id": 11,
+      "character_name": "Ryu Sun-jae",
+      "is_lead": true,
+      "actors": {
+        "name": "Lee Jong-suk",
+        "photo_url": "assets/img/actors/lee-jong-suk.jpg"
+      }
+    },
+    {
+      "drama_id": 24,
+      "actor_id": 11,
+      "character_name": "Choi Ung",
+      "is_lead": true,
+      "actors": {
+        "name": "Lee Jong-suk",
+        "photo_url": "assets/img/actors/lee-jong-suk.jpg"
+      }
+    },
+    {
+      "drama_id": 32,
+      "actor_id": 11,
+      "character_name": "Joo Yeo-jeong",
+      "is_lead": true,
+      "actors": {
+        "name": "Lee Jong-suk",
+        "photo_url": "assets/img/actors/lee-jong-suk.jpg"
+      }
+    },
+    {
+      "drama_id": 2,
+      "actor_id": 12,
+      "character_name": "Jang Jun-woo",
+      "is_lead": true,
+      "actors": {
+        "name": "Lee Jun-ho",
+        "photo_url": "assets/img/actors/lee-jun-ho.jpeg"
+      }
+    },
+    {
+      "drama_id": 27,
+      "actor_id": 12,
+      "character_name": "Fellow Doctor",
+      "is_lead": true,
+      "actors": {
+        "name": "Lee Jun-ho",
+        "photo_url": "assets/img/actors/lee-jun-ho.jpeg"
+      }
+    },
+    {
+      "drama_id": 4,
+      "actor_id": 13,
+      "character_name": "Baek Yi-jin",
+      "is_lead": true,
+      "actors": {
+        "name": "Lee Min-ho",
+        "photo_url": "assets/img/actors/lee-min-ho.jpeg"
+      }
+    },
+    {
+      "drama_id": 31,
+      "actor_id": 13,
+      "character_name": "Bok Gwi-joo",
+      "is_lead": true,
+      "actors": {
+        "name": "Lee Min-ho",
+        "photo_url": "assets/img/actors/lee-min-ho.jpeg"
+      }
+    },
+    {
+      "drama_id": 3,
+      "actor_id": 14,
+      "character_name": "Yoon Se-ri",
+      "is_lead": true,
+      "actors": {
+        "name": "Park Min-young",
+        "photo_url": "assets/img/actors/park-min-young.jpg"
+      }
+    },
+    {
+      "drama_id": 7,
+      "actor_id": 14,
+      "character_name": "Seo Mok-ha",
+      "is_lead": true,
+      "actors": {
+        "name": "Park Min-young",
+        "photo_url": "assets/img/actors/park-min-young.jpg"
+      }
+    },
+    {
+      "drama_id": 10,
+      "actor_id": 14,
+      "character_name": "Woo Young-woo",
+      "is_lead": true,
+      "actors": {
+        "name": "Park Min-young",
+        "photo_url": "assets/img/actors/park-min-young.jpg"
+      }
+    },
+    {
+      "drama_id": 16,
+      "actor_id": 14,
+      "character_name": "Ko Moon-young",
+      "is_lead": true,
+      "actors": {
+        "name": "Park Min-young",
+        "photo_url": "assets/img/actors/park-min-young.jpg"
+      }
+    },
+    {
+      "drama_id": 32,
+      "actor_id": 14,
+      "character_name": "Moon Dong-eun",
+      "is_lead": true,
+      "actors": {
+        "name": "Park Min-young",
+        "photo_url": "assets/img/actors/park-min-young.jpg"
+      }
+    },
+    {
+      "drama_id": 39,
+      "actor_id": 14,
+      "character_name": "Kim Mi-so",
+      "is_lead": true,
+      "actors": {
+        "name": "Park Min-young",
+        "photo_url": "assets/img/actors/park-min-young.jpg"
+      }
+    },
+    {
+      "drama_id": 5,
+      "actor_id": 15,
+      "character_name": "Jang Uk",
+      "is_lead": true,
+      "actors": {
+        "name": "Park Seo-joon",
+        "photo_url": "assets/img/actors/park-seo-joon.jpeg"
+      }
+    },
+    {
+      "drama_id": 8,
+      "actor_id": 15,
+      "character_name": "Yeo Jeong-woo",
+      "is_lead": true,
+      "actors": {
+        "name": "Park Seo-joon",
+        "photo_url": "assets/img/actors/park-seo-joon.jpeg"
+      }
+    },
+    {
+      "drama_id": 13,
+      "actor_id": 15,
+      "character_name": "Jang Tae-sang",
+      "is_lead": true,
+      "actors": {
+        "name": "Park Seo-joon",
+        "photo_url": "assets/img/actors/park-seo-joon.jpeg"
+      }
+    },
+    {
+      "drama_id": 17,
+      "actor_id": 15,
+      "character_name": "Park Sae-ro-yi",
+      "is_lead": true,
+      "actors": {
+        "name": "Park Seo-joon",
+        "photo_url": "assets/img/actors/park-seo-joon.jpeg"
+      }
+    },
+    {
+      "drama_id": 38,
+      "actor_id": 15,
+      "character_name": "Gwan-sik",
+      "is_lead": true,
+      "actors": {
+        "name": "Park Seo-joon",
+        "photo_url": "assets/img/actors/park-seo-joon.jpeg"
+      }
+    },
+    {
+      "drama_id": 39,
+      "actor_id": 15,
+      "character_name": "Lee Young-joon",
+      "is_lead": true,
+      "actors": {
+        "name": "Park Seo-joon",
+        "photo_url": "assets/img/actors/park-seo-joon.jpeg"
+      }
+    },
+    {
+      "drama_id": 8,
+      "actor_id": 16,
+      "character_name": "Nam Ha-neul",
+      "is_lead": true,
+      "actors": {
+        "name": "Park Shin-hye",
+        "photo_url": "assets/img/actors/park-shin-hye.jpg"
+      }
+    },
+    {
+      "drama_id": 33,
+      "actor_id": 16,
+      "character_name": "Kang Bit-na / Justitia",
+      "is_lead": true,
+      "actors": {
+        "name": "Park Shin-hye",
+        "photo_url": "assets/img/actors/park-shin-hye.jpg"
+      }
+    },
+    {
+      "drama_id": 34,
+      "actor_id": 16,
+      "character_name": "Shim Su-ryeon",
+      "is_lead": true,
+      "actors": {
+        "name": "Park Shin-hye",
+        "photo_url": "assets/img/actors/park-shin-hye.jpg"
+      }
+    },
+    {
+      "drama_id": 14,
+      "actor_id": 17,
+      "character_name": "Chae Song-hwa",
+      "is_lead": true,
+      "actors": {
+        "name": "Shin Min-a",
+        "photo_url": "assets/img/actors/sin-min-ah.jpg"
+      }
+    },
+    {
+      "drama_id": 15,
+      "actor_id": 17,
+      "character_name": "Yoon Hye-jin",
+      "is_lead": true,
+      "actors": {
+        "name": "Shin Min-a",
+        "photo_url": "assets/img/actors/sin-min-ah.jpg"
+      }
+    },
+    {
+      "drama_id": 18,
+      "actor_id": 17,
+      "character_name": "Joo-yeon",
+      "is_lead": true,
+      "actors": {
+        "name": "Shin Min-a",
+        "photo_url": "assets/img/actors/sin-min-ah.jpg"
+      }
+    },
+    {
+      "drama_id": 23,
+      "actor_id": 17,
+      "character_name": "Kang Joo-eun",
+      "is_lead": true,
+      "actors": {
+        "name": "Shin Min-a",
+        "photo_url": "assets/img/actors/sin-min-ah.jpg"
+      }
+    },
+    {
+      "drama_id": 35,
+      "actor_id": 17,
+      "character_name": "Queen Im Hwa-ryeong",
+      "is_lead": true,
+      "actors": {
+        "name": "Shin Min-a",
+        "photo_url": "assets/img/actors/sin-min-ah.jpg"
+      }
+    },
+    {
+      "drama_id": 1,
+      "actor_id": 18,
+      "character_name": "Emperor Raynard",
+      "is_lead": true,
+      "actors": {
+        "name": "Song Joong-ki",
+        "photo_url": "assets/img/actors/song-joong-ki.jpg"
+      }
+    },
+    {
+      "drama_id": 2,
+      "actor_id": 18,
+      "character_name": "Vincenzo Cassano",
+      "is_lead": true,
+      "actors": {
+        "name": "Song Joong-ki",
+        "photo_url": "assets/img/actors/song-joong-ki.jpg"
+      }
+    },
+    {
+      "drama_id": 12,
+      "actor_id": 18,
+      "character_name": "Yoon Dong-joo",
+      "is_lead": true,
+      "actors": {
+        "name": "Song Joong-ki",
+        "photo_url": "assets/img/actors/song-joong-ki.jpg"
+      }
+    },
+    {
+      "drama_id": 14,
+      "actor_id": 18,
+      "character_name": "Lee Ik-joon",
+      "is_lead": true,
+      "actors": {
+        "name": "Song Joong-ki",
+        "photo_url": "assets/img/actors/song-joong-ki.jpg"
+      }
+    },
+    {
+      "drama_id": 35,
+      "actor_id": 18,
+      "character_name": "Grand Prince Seong-nam",
+      "is_lead": true,
+      "actors": {
+        "name": "Song Joong-ki",
+        "photo_url": "assets/img/actors/song-joong-ki.jpg"
+      }
+    },
+    {
+      "drama_id": 21,
+      "actor_id": 19,
+      "character_name": "Jeong Gu-won",
+      "is_lead": true,
+      "actors": {
+        "name": "Song Kang",
+        "photo_url": "assets/img/actors/songkang.jpeg"
+      }
+    },
+    {
+      "drama_id": 22,
+      "actor_id": 19,
+      "character_name": "Park Jae-eon",
+      "is_lead": true,
+      "actors": {
+        "name": "Song Kang",
+        "photo_url": "assets/img/actors/songkang.jpeg"
+      }
+    },
+    {
+      "drama_id": 30,
+      "actor_id": 19,
+      "character_name": "Cha Hyun-soo",
+      "is_lead": true,
+      "actors": {
+        "name": "Song Kang",
+        "photo_url": "assets/img/actors/songkang.jpeg"
+      }
+    },
+    {
+      "drama_id": 36,
+      "actor_id": 19,
+      "character_name": "Ha Eun-gyeol",
+      "is_lead": true,
+      "actors": {
+        "name": "Song Kang",
+        "photo_url": "assets/img/actors/songkang.jpeg"
+      }
+    },
+    {
+      "drama_id": 38,
+      "actor_id": 20,
+      "character_name": "Ae-soon",
+      "is_lead": true,
+      "actors": {
+        "name": "IU (Lee Ji-eun)",
+        "photo_url": "assets/img/actors/UI.jpg"
+      }
+    },
+    {
+      "drama_id": 6,
+      "actor_id": 21,
+      "character_name": "Lee Cheong-san",
+      "is_lead": true,
+      "actors": {
+        "name": "Wi Ha-joon",
+        "photo_url": "assets/img/actors/wi-ha-joon.jpg"
+      }
+    },
+    {
+      "drama_id": 13,
+      "actor_id": 21,
+      "character_name": "Kwon Jun-taek",
+      "is_lead": false,
+      "actors": {
+        "name": "Wi Ha-joon",
+        "photo_url": "assets/img/actors/wi-ha-joon.jpg"
+      }
+    },
+    {
+      "drama_id": 18,
+      "actor_id": 21,
+      "character_name": "Gil-ho",
+      "is_lead": true,
+      "actors": {
+        "name": "Wi Ha-joon",
+        "photo_url": "assets/img/actors/wi-ha-joon.jpg"
+      }
+    },
+    {
+      "drama_id": 28,
+      "actor_id": 21,
+      "character_name": "Hwang Jun-ho",
+      "is_lead": true,
+      "actors": {
+        "name": "Wi Ha-joon",
+        "photo_url": "assets/img/actors/wi-ha-joon.jpg"
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "id": 6,
+      "drama_id": 1,
+      "user_id": "anonymous",
+      "username": "Tester",
+      "rating": 10,
+      "review_text": "Persistence verification test",
+      "created_at": "2026-11-22T10:16:03.420Z"
+    },
+    {
+      "id": 1,
+      "drama_id": 1,
+      "rating": 10,
+      "username": "kdrama_lover",
+      "review_text": "Sangat menghibur dan lucu! Chemistry pemerannya luar biasa.",
+      "created_at": "2025-02-15T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "drama_id": 1,
+      "rating": 9,
+      "username": "alvenath",
+      "review_text": "Visual dan kulinernya bikin laper setiap nonton!",
+      "created_at": "2025-02-18T14:30:00Z"
+    },
+    {
+      "id": 3,
+      "drama_id": 2,
+      "rating": 10,
+      "username": "mafia_fan",
+      "review_text": "Song Joong-ki as Vincenzo is legendary. One of the best crime comedies ever.",
+      "created_at": "2024-01-10T08:00:00Z"
+    },
+    {
+      "id": 4,
+      "drama_id": 3,
+      "rating": 10,
+      "username": "seoul_dweller",
+      "review_text": "Masterpiece. Perfect balance of laughter, tears, and romance.",
+      "created_at": "2023-11-05T12:00:00Z"
+    },
+    {
+      "id": 5,
+      "drama_id": 25,
+      "rating": 10,
+      "username": "queen_fan",
+      "review_text": "Kim Soo-hyun & Kim Ji-won chemistry broke all records for a reason.",
+      "created_at": "2024-05-01T15:00:00Z"
+    }
+  ],
+  "watchlist": [
+    {
+      "id": 1,
+      "drama_id": 1,
+      "user_id": "user-demo",
+      "added_at": "2025-02-15T12:00:00Z"
+    },
+    {
+      "id": 2,
+      "drama_id": 2,
+      "user_id": "user-demo",
+      "added_at": "2025-02-16T12:00:00Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "user-demo",
+      "email": "demo@klist.com",
+      "username": "KListDemo",
+      "role": "user",
+      "created_at": "2026-11-22T10:13:36.042Z"
+    },
+    {
+      "id": "user-admin",
+      "email": "admin@klist.com",
+      "username": "Admin",
+      "role": "admin",
+      "created_at": "2026-11-22T10:13:36.054Z"
+    }
+  ]
+}

@@ -211,3 +211,4 @@ SELECT setval('dramas_id_seq', (SELECT MAX(id) FROM dramas));
 SELECT setval('actors_id_seq', (SELECT MAX(id) FROM actors));
 SELECT setval('genres_id_seq', (SELECT MAX(id) FROM genres));
 SELECT setval('reviews_id_seq', (SELECT MAX(id) FROM reviews));
+
